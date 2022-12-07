@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 변수:저장해둔 값이 변할수 있는 종류
+        // 함수:저장해둔 값이 변할수 없는 경우
+        // 변수선언의 종류
+        // 1.var 함수 스코프 변수에서는 글로벌 스코프이지만 함수에서는 지역스코프 이다.
+            //변수의 선언부가 호이스팅 된다.(선언부를 제일 하단에 작성하여도 실행시 제일 상단에서 작성된것으로 인식한다.-단 선언된 것만 인식할뿐 값은 선언되지않는다.) 
+        // 2.let 블럭 스코프 변수에서도 로컬 스코프이고 함수에서도 반응하지않는다.
+        // 3.const 블록 스코프 선언시 값을 할당해야하고 할당후 값을 변경할수 없다.
+        // 글로벌 변수:최상단에서 선언한 변수 쿠드 내 어디서든 사용가능
+        // 로컬 변수:{}로 지정한 범위 내부에서만 사용할수있다.
+        // 변수의 유효범위 =scope
+
+        const const1 ="AAA"
+         let userName ="green";
+        {
+            var userAge = 30;
+            console.log("블럭안에서 사용"+userName);
+        }
+        console.log("바깥에서 사용"+userName)
+        console.log("바깥에서 사용"+userAge);
+        var str1;
+        console.log(str);
+        var str = "green";
+        let abc = "aaa";
+        // let은 블럭 스코프
+        // var는 함수에 스코프를 준다
+        {
+            let aaa = 10;
+            var bbb = 20;
+        }
+        function myfunc(){
+            var ccc =30;
+        }
+        console .log(ccc);
+        console.log(bbb);
+        // 호이스팅
+        // var str;
+        // console.log(str);
+        // let abc = "aaa"
+        // str = "green"
+        let fun = function(){
+            console.log("aaa");
+        }
+        typeof fun;
+    </script>
+</body>
+</html>

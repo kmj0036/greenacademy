@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="userName" value="수요일">
+    <button onclick="inputPrint()">click</button>
+    <ul>
+        <li>list<span>spell</span></li>
+        <li>list<span>spell</span></li>
+        <li>list<span>spell</span></li>
+        <li>list<span>spell</span></li>
+    </ul>
+    <script>
+        const input = document.querySelector("#userName");
+        console.log(input);
+        function inputPrint(){
+            input.value= "";
+        }
+        // 부모 요소를 찾는 parentElement 
+        // function liClick(we){
+        //     console.log(we.parentElement);
+        // }
+        const ul = document.querySelector("ul")
+        ul.addEventListener("click",function(e){
+            let li = e.target;
+            console.log(li);
+        })
+    </script>
+</body>
+</html>

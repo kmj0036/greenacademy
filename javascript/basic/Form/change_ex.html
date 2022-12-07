@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>가격 <input type="text" id="price" name="price"/></p>
+    <p>수량
+        <select name="number" id="number">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+        </select>
+    </p>
+    <p>
+        총가격 <input type="text" name="totalPrice" id="totalPrice">
+    </p>
+    <script>
+        let priceInput = document.querySelector("#price");
+        let selNumber = document.querySelector("#number");
+        let totalPrice = document.querySelector("#totalPrice")
+        // 가격 input값을 숫자타입으로 변경
+        let priceNumber;
+        // 함수선언부
+        function sum(){
+            let total=priceNumber * selNumber.value;
+            totalPrice.value = total;
+        }
+        // priceInput에 값이 입력될때 다음 함수를 호출한다.
+        priceInput.addEventListener("input",function(){
+            // priceNumber에 할당한다.  (this.value)값을 숫자타입으로 전환하여
+            // (this.value)에서 this는 해당 이벤트를 발생시킨 객체인  priceInput을 의미한다.
+            //  priceInput의value값을 받아와 숫자형 데이터를 인식하여priceNumber에 할당한다. 
+            priceNumber=Number(this.value);
+            // 만약 priceNumber값이 isNaN이면 리턴하고 아니라면 sum();함수를 호출하여라
+            if(isNaN(priceNumber))return;
+            else{
+                sum();
+            }
+        })
+        // selNumber의 값이 change될때 sum 함수를 호출한다.
+        selNumber.addEventListener("change",sum)
+    </script>
+</body>
+</html>

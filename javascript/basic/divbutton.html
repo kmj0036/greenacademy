@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50%;
+            height: 50vh;
+            border: 1px solid #222;
+        }
+        button {
+            width: 5%;
+            height: 30px;
+            margin: 20px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <button onclick="chBacdkground('pink')">pink색상</button>
+    <button onclick="chBacdkground('red')">red 색상</button>
+    <button onclick="chBacdkground('blue')">blue 색상</button>
+    <button onclick="chBacdkground('green')">green 색상</button>
+    <button onclick="bgColorView()">배경색싱 알기</button>
+    <script>
+        function chBacdkground(color){
+            document.querySelector('div').style.background =color;
+        }
+        // div배경색을 경고창에 출력
+        function bgColorView(){
+            let div= document.querySelector('div');
+            let bgColor = window.getComputedStyle(div).getPropertyValue('background-color');
+            alert(bgColor);
+        }
+    </script>
+</body> 
+</html>

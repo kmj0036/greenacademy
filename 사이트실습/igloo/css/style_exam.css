@@ -1,0 +1,221 @@
+@charset "utf-8"
+
+:root {
+    --color1 :rgb(0, 132, 203);
+    --color2 :rgb(0, 142, 214);
+    --color3 :rgb(25, 204, 201);
+    --color4 :rgb(66, 90, 211);
+    --color5 :rgb(44, 173, 239);
+    --color6 :rgb(0, 132, 211);
+}
+body {
+    font-family: "맑은 고딕", sans-serif;
+    font-size: 14px;
+    color: black;
+    line-height: 1.6;
+}
+.inner_container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* header style start */
+#top_gnb {
+    border-bottom:  1px solid #ccc;
+}
+#top_gnb > div:nth-child(1) {
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+}
+#top_gnb > div:nth-child(1) ul {
+    display: flex;
+    align-items: center;
+}
+#top_gnb > div:nth-child(1) li {
+    padding: 0 6px;
+}
+#top_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+#top_menu ul {
+    display: flex;
+}
+#top_menu ul li {
+    padding: 0 20px;
+}
+#top_menu input {
+    border: 1px solid #ccc;
+}
+#top_menu ul li::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color1)
+    transform: scale(0,1);
+    transition: 0.5s;
+}
+#top_menu ul li:hover::after {
+    transform: scale(1,1);
+}
+/*header style end  */
+/* main style start */
+main section {
+    padding: 60px 0;
+}
+.title {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.2;
+    padding-bottom: 40px;
+}
+.title h2 {
+    font-size: 48px;
+    padding-bottom: 20px;
+    
+}
+.title p {
+    font-size: 18px;
+    line-height: 1.2;
+}
+/* visual section start */
+#visual {
+    background-color: rgb(255, 204, 0);
+    color: #fff;
+    
+}
+#visual img {
+    width: 100%;
+}
+/* visual section end */
+
+#info .title h2 {
+    color: rgb(0, 132, 203);
+}
+#info ul {
+    display: flex;
+    justify-content:  space-between;
+}
+#info ul li {
+    width: 25%;
+    text-align: center;
+}
+#info ul li img {
+    width: 86%;
+}
+#info h3 {
+    padding-top: 20px;
+}
+#info p {
+    padding-bottom: 20px;
+}
+#info a {
+    border: 1px solid rgb(0, 132, 203);
+    display: inline-block;
+    width: 120px;
+    line-height: 40px;
+}
+#info li:hover a {
+    background-color:rgb(0, 132, 203) ;
+    color: #fff;
+}
+#blog {
+    background-color: #efefef;
+}
+#blog ul {
+    display: flex;
+    justify-content: space-between;
+}
+#blog ul li {
+    width: 24%;
+    background-color: #fff;
+}
+.text {
+    padding: 16px;
+}
+#blog ul li > div:nth-child(1) {
+    position: relative;
+}
+#blog ul li .blackbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    transition: 0.5;
+}
+#blog ul li .blackbg a {
+    color: #fff;
+    border: 1px solid #fff;
+    width: 100px;
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%,-50%);
+}
+#blog ul li img {
+    width: 100%;
+}
+#blog ul li >:nth-child(1):hover .blackbg {
+    opacity: 1;
+}
+#blog ul li .blackbg a:hover {
+    background-color: #fff;
+    color: #333;
+}
+#footer_menu {
+    border-bottom: #ccc 1px solid;
+    border-top: #ccc 1px solid;
+}
+#footer_menu .inner_container {
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+} 
+#footer_menu ul {
+    display: flex;
+    line-height:  50px;
+}
+#footer_menu ul a {
+    padding: 0 20px;
+}
+#footer_menu ul li {
+    border-right:  1px solid #ccc;
+}
+#footer_menu a {
+    padding:  0 20px;
+}
+#footer_menu div > a {
+    border-left:  1px solid #ccc;
+}
+footer > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    
+}
+footer > div:nth-child(2) address {
+    width: 60%;
+}
+footer > div:nth-child(2) ul {
+    display: flex;
+}
+footer > div:nth-child(2) ul li {
+    padding: 0 10px;
+}

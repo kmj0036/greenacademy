@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+        * { padding:0; margin:0; box-sizing: border-box; }
+        a { text-decoration: none; color: inherit;}
+        li { list-style: none; }
+        /* reset/ */
+        :root {
+            --color1:f1f1f1;
+            --color2:3d3d3d;
+            --color3:#555;
+            --default-gap:16px;
+        }
+        body {
+            background-color: var(--color1);
+            font-family: "나눔고딕";
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--color2);
+        }
+        #wrap {
+            display: grid;
+            grid-template-rows: 150px repeat(3,auto) 80px;
+            grid-template-columns: 75% 25%;
+            grid-template-areas: 
+            "header header"
+            "content1 content2"
+            "content3 content4"
+            "content3 content5"
+            "footer footer";
+            padding: var(--default-gap);
+            column-gap: var(--default-gap);
+            row-gap: var(--default-gap);
+        }
+        #wrap > div {
+            background-color: #fff;
+        }
+        #header {
+            text-align: center;
+            grid-area: header;
+            grid-template-rows: repeat(3,1fr);
+            padding-top: 20px;
+        }
+        #header div {
+            display:  grid;
+            grid-template-columns: 30% 10%;
+            justify-content: space-between;
+            background-color:var(--color2);
+            line-height: 40px;
+            color: #fff;
+            background-color: #555;
+        }
+        .card {
+            padding: var(--default-gap);
+        }
+        .bg {
+            background-color: var(--color3);
+            color: #fff;
+            height: 100px;
+            margin: var(--default-gap) 0;
+            padding: var(--default-gap);
+        }
+        #header div ul{
+            display:  grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .content1 {
+            grid-area: content1;
+        }
+        .content2 {
+            grid-area: content2;
+        }
+        .content3 {
+            grid-area: content3;
+        }
+        .content4 {
+            grid-area: content4;
+        }
+        .content5 {
+            grid-area: content5;
+        }
+        #footer {
+            grid-area: footer;
+        }
+        #wrap #footer {
+            background-color: var(--color2);
+            text-align: center;
+            color: #fff;
+            line-height: 80px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>My Website</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div>
+                <ul>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                </ul>
+                <a href="#">link</a>
+            </div>
+        </div>
+        <div class="card content1">
+            <h2>TITLE HEADING</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+            <div class="bg">image</div>
+            <h3>Title text</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card content3">
+            <h2>TITLE HEADING</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+            <div class="bg">image</div>
+            <h3>Title text</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card content2">
+            <p2>About Me</p2>
+            <div class="bg">image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>   
+        </div>
+         <div class="card content4">
+            <h2>Popular Post</h2>
+            <ul class="bg">
+                <li>image</li>
+                <li>image</li>
+                 <li>image</li>
+         </ul>
+        </div>
+         <div class="card content5">
+            <h2>Follow Me</h2>
+            <p>Some text..</p>
+        </div>
+        <div id="footer">
+            Footer
+        </div>
+    </div>
+</body>
+</html>

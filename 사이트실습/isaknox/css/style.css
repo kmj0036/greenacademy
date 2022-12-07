@@ -1,0 +1,129 @@
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+body {
+  font-family: "NanumSquare", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+.inner_con {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#header {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+#header ul:nth-child(1) {
+  float: left;
+}
+#header ul:nth-child(3) {
+  float: right;
+}
+.clearboth::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#header h1 {
+  display: inline-block;
+}
+#header li {
+  float: left;
+  padding: 0 20px;
+}
+
+#visual {
+  background-color: #000;
+}
+#visual img {
+  width: 100%;
+}
+#product_menu {
+  border-bottom:3px double #ccc;
+  padding: 30px 0;
+}
+#product_menu h2 {
+  float: left;
+}
+#product_menu ul {
+  float: right;
+}
+#product_menu ul li {
+  float: left;
+  padding: 0 20px;
+  line-height: 45px;
+}
+#product_lists h3 {
+  text-align: center;
+  padding: 20px 0;
+}
+#product_lists li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+#product {
+  padding-bottom: 30px;
+}
+#banner div {
+  float: left;
+  overflow: hidden;
+}
+#banner div img {
+  width: 100%;
+  height: auto;
+}
+#banner div:nth-child(1) {
+  width:50%;
+  height: 500px;
+  background-color: aqua;
+}
+#banner div:nth-child(2) {
+  width: 50%;
+  height: 250px;
+  background-color: bisque;
+}
+#banner div:nth-child(3) {
+  width: 25%;
+  height: 250px;
+  background-color: brown;
+}
+#banner div:nth-child(4) {
+  width: 25%;
+  height: 250px;
+  background-color: coral;
+}
+
+#footer_menu {
+  background-color: aliceblue;
+  text-align: center;
+  padding: 20px;
+}
+#footer_menu > a {
+  float: left;
+}
+#footer_menu > select {
+  float: right;
+}
+#footer_menu ul {
+  display: inline-block;
+}
+#footer_menu ul li {
+  float: left;
+  padding: 0 20px;
+}
+#footer_copy {
+  padding: 20px;
+}
+#footer_copy address {
+  font-style: normal;
+  float: left;
+  width: 70%;
+}
+#footer_copy  h1 {
+  float: right;
+}

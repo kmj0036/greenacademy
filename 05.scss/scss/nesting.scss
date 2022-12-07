@@ -1,0 +1,84 @@
+body{
+    $width:1200px;
+    font: {
+        size: 12px;
+        family:"맑은 고딕";
+        weight:bold;
+    }
+    padding: {
+        left: 10px;
+        right: 20px;
+        top: 20px;
+        bottom: 10px;
+    }
+    div {
+        width: 100%;
+        max-width: $width;
+        margin: 0 auto;
+        background-color: aliceblue;
+        display: flex;
+        justify-content: space-between;
+        h1{
+            font-size: 24px;
+        }
+        ul{
+            display: flex;
+            li{
+                list-style: none;
+                padding: 0 20px;
+                &:hover {
+                    background-color: red;
+                }
+                &::after{
+                    content: "Hello World";
+                }
+            }
+        }
+    }
+}
+// 같은 이름으로 시작하는 속성 스타일 지정하기
+// font (size family weight)
+// padding (top bottom left right)
+// padding: {
+//     left:50px;
+//     top:20px;
+//     left:30px;
+//     right:10px;
+// }
+// 클래스이름의 시작이 같은 클래스 스타일 정의
+// .fs {
+//     &-small{
+//         font-size: 14px;
+//     }
+//     &-middle {
+//         font-size: 18px;
+//     }
+//     &-large {
+//         font-size: 42px;
+//     }
+// }
+// &는 선택자 자기 자신 
+.fs {
+    &-small {
+        font-size: 14px;
+    }
+    &-medium {
+        font-size: 18px;
+    }
+    &-large {
+        font-size: 24px;
+    }
+}
+.btn {
+    width: 100px;
+    height: 50px;
+    background-color: aquamarine;
+    &.active {
+        border-bottom: 3px solid red;
+    }
+}
+// scss의 root 변수선언
+//  $width : 100px;
+
+// li{
+    // width: $width;

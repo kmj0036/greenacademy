@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 리터럴: 값을 주는 구문
+        // let dog1= {
+        //     name:"a",
+        //     age:2,
+        //     color:"red",
+        //     sound(){
+        //         console.log("wall")
+        //     }
+        // }
+        // // let name =dog1.name;
+        // // let sound= dog1.sound;
+        // // sound();
+        // // dog1.sound();
+
+        // let {name,sound,age}=dog1
+        // console.log()
+        class Dog {
+            constructor(name,age,color){
+                this.name =name;
+                this.age = age;
+                this.color= color;
+            }
+            sound(){
+                console.log("wall")
+            }
+        }
+        let dog1 = new Dog("구름",3,"white");
+        let {sound} = dog1;
+        console.log(sound);
+
+    </script>
+</body>
+</html>

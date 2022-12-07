@@ -1,0 +1,20 @@
+*{ margin: 0; padding: 0; box-sizing: border-box;}
+#wrap {
+    width: 70%;
+    margin:  50px auto;
+    background-color: tomato;
+    padding: 2px;
+}
+.div-scoreboard {
+    border:2px solid #fff;
+    text-align: center;
+}
+.div-short-left {
+    padding-top: 20px;
+    line-height: 40px;
+}
+#short-left {
+    background-color: black;
+    word-wrap: 80px;
+    display: inline-block;
+}

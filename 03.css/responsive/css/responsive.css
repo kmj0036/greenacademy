@@ -1,0 +1,124 @@
+/* common style area */
+* {padding: 0; margin: 0; box-sizing: border-box;vertical-align: baseline; }
+a {text-decoration: none; color: inherit;}
+li {list-style: none; font-style: inherit;}
+img { border: 0; }
+:root {
+    --color1: #2ecc71;
+    --color2: #e65d5d;
+    --color3: #219af7;
+    --color4: #ffc40f;
+    --color5: #a660c2;
+    --color6: #e6567a;
+}
+body {
+    background: url(../images/body_bg.png);
+}
+#wrap {
+    margin:  0 auto;
+    width: 80%;
+    max-width: 1200px;
+    background-color: khaki;
+}
+/* common style area */
+/* header style start */
+#header  {
+    height: 80px;
+    background-color: var(--color1);
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+#header > h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 140px;
+    background-color: var(--color1);
+    text-align: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+#headermenu {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+#headermenu ul {
+    display: flex;
+}
+.topmenu li {
+    padding: 0 20px;
+}
+.topicon li {
+    padding: 0 10px;
+}
+.toggle {
+    display: none;
+}
+/* header style end */
+
+/* contents style start */
+#contents {
+    display: flex;
+    flex-wrap: wrap;
+}
+.slider_section {
+    width: 50%;
+    background: url(../images/slider_01.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.slider_section a {
+    display: block;
+    width: 34px;
+    height: 39px;
+    background-image: url('../images/slider_arrow.png');
+    font-size: 0;
+    position: absolute;
+    top: calc(50% - 15px);
+}
+.prev {
+    left:-10px;
+    background-position: left top;
+}
+.next {
+    right: -10px;
+    background-position: right top;
+}
+.post_section {
+    width: 30%;
+    background: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.post_section ul {
+    width: 70%;
+    text-align:center;
+    color: #fff;
+}
+.post_section ul img {
+    width: 100%;
+}
+.post_section ul li {
+    padding-bottom: 20px;
+}
+.rankup_section {
+    width: 20%;
+    background: var(--color3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.rankup_section h3 {
+    padding-bottom: 20px;
+}

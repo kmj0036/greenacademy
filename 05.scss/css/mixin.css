@@ -1,0 +1,26 @@
+@charset "UTF-8";
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "나눔 고딕";
+  color: red;
+}
+h2::after {
+  content: "hello";
+}
+
+.box1 {
+  border: 1px dashed red;
+}
+
+.box2 {
+  border: 5px dashed blue;
+}
+
+.box3 {
+  border: 1px dashed black;
+}
+
+.box4 {
+  border: 1px dashed pink;
+}

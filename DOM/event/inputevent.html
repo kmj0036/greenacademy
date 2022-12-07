@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body {
+            text-align: center;
+            background-color: beige;
+        }
+        header{
+            width: 20%;
+            margin: 0 auto;
+            height: 10vh;
+            padding-top: 30px ;
+            background-color: blanchedalmond;
+        }
+        #container {
+            width: 20%;
+            margin: 0 auto;
+            background-color: blanchedalmond;
+        }
+        .inmid {
+            margin: 20px 0;
+        }
+        input{ 
+            line-height: 40px;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>textgame</h1>
+    </header>
+    <div id="container">
+        <div id="text">
+            dispaly
+        </div>
+        <input type="text" id="myInput" class="inmid" onkeyup="enterkey()">
+        <p class="inmid" id="lefttime">남은시간:  <span>초</span></p>
+        <p class="inmid" id="score">점수:  <span>점</span></p>
+
+    </div>
+    <script>
+        const input =document.querySelector("#myInput");
+        const rantext =document.querySelector("#rantext");
+        const lefttime =document.querySelector("#lefttime");
+        const score = document.querySelector("#score");
+        let getscore=0
+        let time=20
+        let isplaying;
+        let timeinterval;
+        let arr =["color","pet","code","study","level","google","discord","server","game","end","overwatch","phone","mask","legend","youtube","visual","chrome","git","luck","computer"] 
+        
+        // 랜덤으로 텍스트가 나오는  배열 
+        
+        // outputtext는 배열의 인덱스 0번부터 마지막 번호까지중 랜덤한 인덱스의 value값을 가져올것이다.
+        let outputtext= Math.floor(Math.random()*arr.length)
+        // 엔터키를 누르면 발생할수있는 함수
+        function enterkey() {
+	    if (window.event.keyCode == 13) {
+        }
+    }       
+    console.log(outputtext)
+    </script>
+</body>
+</html>

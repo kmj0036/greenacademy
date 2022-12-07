@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{cursor: pointer;
+        padding: 50px 0;}
+    </style>
+</head>
+<body>
+    <li onclick="printLi(this)">list1</li>
+    <li onclick="printLi(this)">list2</li>
+    <li onclick="printLi(this)">list3</li>
+    <li onclick="printLi(this)">list4</li>
+    <select name="number" id="number"onchange="selectFun(this)">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    <script>
+        function selectFun(select){
+            console.log(select.value);
+        }
+        function printLi(li){
+            console.log(li.innerHTML);
+        }
+        let person = {
+            firstName:"John",
+            lastName: "Doe",
+            fullName:function(){
+                return this.firstName+""+this.lastName;
+                console.log(this)
+            }
+            
+        }
+        console.log(person.fullName());
+
+        // rest parameter
+        function add(...rest){
+            let sum=0;
+            rest.forEach(num=>{
+                sum= sum+num;
+            })
+            return sum;
+        }
+        let result1 =add(1,2,3);
+        let result2 =add(1,2,3,4);
+        let result3 =add(1,2,3,4,5,6);
+        console.log(result1);
+        console.log(result2);
+        console.log(result3);
+
+        const hello3= (name) => `Hello${name}`;
+        console.log(hello3(" world"));
+        let str1= "green";
+        console.log("안녕하세요"+str1+"씨");
+        console.log(`안녕하십니까${str1}님`)
+    </script>
+</body>
+</html>

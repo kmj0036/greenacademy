@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{background-color: #eee;}
+        .color{
+            width: 50px;
+            height: 50px;  
+            position: absolute;
+        }
+        button{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 0;
+            outline: 0;
+        }
+        .color-btn[data-value="red"]{background: red;}
+        .color-btn[data-value="blue"]{background: blue;}
+        .color-btn[data-value="green"]{background: green;}
+    </style>
+</head>
+<body>
+    <button class="color-btn" data-type="color" data-value="red"></button>
+    <button class="color-btn" data-type="color" data-value="green"></button>  
+    <button class="color-btn" data-type="color" data-value="blue"></button>
+    <canvas id="canvas" width="1000" height="500">
+        <button></button>
+    </canvas>
+    <script>
+        const canvas =document.querySelector('canvas');
+        const ctx = canvas.getContext("2d");
+        
+
+        let drawingMode;
+        ctx.lineWidth= 30;
+        ctx.lineCap="round";
+        ctx.strokeStyle= "red"
+        function downHandler(){
+            drawingMode = true;
+        }
+        function upHandler(){
+            drawingMode = false;
+        }
+        function moveHandler(e) {
+            if(!drawingMode)return;
+            let x =e.pageX;
+            let y =e.pageY;
+            ctx.beginPath();
+            ctx.moveTo(x,y);
+            ctx.lineTo(x,y);
+            ctx.stroke();
+            console.log(x,y)    
+        }
+        function setColor(){
+            let colorVal= e.target.dataset.value;
+            ctx.strokeStyle =colorVal
+        }
+        
+        canvas.addEventListener("mousedown",downHandler);
+        canvas.addEventListener("mouseup",upHandler)
+        canvas.addEventListener("mousemove",moveHandler)
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../css/todolist.css"> -->
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e5686746cb.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/e5686746cb.js" crossorigin="anonymous"></script> -->
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        #wrap{
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #listheader {
+            background: linear-gradient(to left,#fc5d7d,#6a82fb);
+            text-align: center;
+            padding-bottom:30px ;
+        }
+        #listheader h1 {
+            color: #fff;
+            padding-top:40px ;
+        }
+        #listheader div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #listheader input{
+            width: 70%;
+            height: 40px;
+            border-radius: 20px;
+            border: 0;
+            outline: 0;
+            padding-left:20px ;
+        }
+        #listheader button {
+            background-color: transparent;
+            border: 0;
+            color: #fff;
+            margin-left: 10px;
+        }
+        #listheader button i {
+            font-size: 35px;
+
+        }
+        li {
+            list-style: none;
+            line-height: 50px;
+            padding: 0 10%;
+            background:  #eee;
+        }
+        li:hover{
+            background:  #ddd;
+        }
+        li span {
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="listheader">
+            <h1>To Do List</h1>
+            <div>
+                <input type="text" id="listInput">
+                <button><i class="fa fa-plus-circle"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="todoList">
+        <ul id="listUl">
+
+        </ul>
+    </div>
+    <script>
+        const btn =document.querySelector("button");
+        const input = document.querySelector("input")
+        const ul = document.querySelector("ul");
+        btn.addEventListener("click",addList());
+
+        function addList(){
+            if(!input.value){
+                return;
+            }
+            // input value를 litext로 할당
+            let litext = input.value;
+            let li=document.createElement("li")
+            li.innerHTML=`${litext}<span>x</span>`;
+            ul.appendChild(li);
+            input.value="";
+            spanEvent();
+        }
+        // x눌러서 li지우는 이벤트연결
+        function spanEvent(){
+            let spans =document.querySelectorAll("li span")
+            if(!span){return;}
+            spans.forEach(span=>{
+                span.addEventListener("click",function(){
+                    this.parentElement.remove();
+                    console.log(this);
+                })
+            })
+        }
+    </script>
+    <!-- <div id="wrap">
+        <div id="header">
+            <h1>To Do List</h1>
+            <input type="text"value= "a" id="inputtext">
+            <i onclick="inputPrint()" class="fa-solid fa-plus"></i>
+        </div>
+        <div id="container">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+    <script>
+        let ul =document.querySelector("ul")
+        const input = document.querySelector("#inputtext");
+        console.log(input);
+        function inputPrint(){
+            console.log(input.value)
+            ul.appendChild(li)
+            document.createTextNode(input.value)
+        }
+    </script> -->
+</body>
+</html>

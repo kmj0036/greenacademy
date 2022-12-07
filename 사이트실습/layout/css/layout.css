@@ -1,0 +1,73 @@
+@charset "UTF-8";
+body {
+  font-family: "맑은 고딕", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#wrap {
+  background-color: #f1f1f1;
+  padding: 16px;
+}
+
+#header {
+  background-color: #fff;
+  height: 150px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+#header #headerTitle {
+  height: 120px;
+  padding-top: 25px;
+}
+#header #headerMenu {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+#header #headerMenu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#header #headerMenu a {
+  padding: 0 16px;
+}
+
+#contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#contents #left {
+  width: 75%;
+}
+#contents #right {
+  width: 25%;
+  padding-left: 16px;
+}
+#contents .whiteBg {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+#contents .whiteBg .grayBg {
+  background: #555;
+  color: #fff;
+  height: 120px;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+#footer {
+  text-align: center;
+  background-color: #555;
+  color: #fff;
+  padding: 16px 0;
+}

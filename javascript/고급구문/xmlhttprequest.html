@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- request/response
+        요청/응답 -->
+        <script>
+            // request 는 header 와 body로 구성
+            // 타입 지정은 header에 
+            // 데이터들은 body에 담긴다.
+            // XMLHttpRequest 객체 생성
+            const xhr = new XMLHttpRequest();
+            // open("http메서드","경로")- http 메서드 :get, post, put, patch, delete
+            // setRequestHeader("content-type","application/json")json 데이터를 전송한다.
+            // send(data)
+            // xhr.onload = ()=> {}
+            // http메서드랑 ,url 경로 정의
+            xhr.open("GET","https://jsonplaceholder.typicode.com/posts")
+            // header에 있는 값중에 content-type을 정의
+            xhr.setRequestHeader("content-type","aplication/json");
+            // 요청 전송
+            xhr.send();
+            xhr.onload = ()=>{
+                // 정상적으로 응답되면 200번
+                if(xhr.status===200){
+                    // xhr.response =응답 데이터 
+                    // json 형태를 java script 에서 사용가는한 객체로 변환 
+                    const res = JSON.parse(xhr.response);
+                    console.log(res);
+                }else {
+                    // 응답 상태번호와 응답메시지 출력
+                    console.error(xhr.status,xhr.statusText)
+                }
+            };
+        </script>
+</body>
+</html>

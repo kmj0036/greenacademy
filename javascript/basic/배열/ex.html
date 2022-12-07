@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1.배열을 문자로 만들기
+    const fruits= ["포도","딸기","수박","사과"];
+    const str =fruits.join(" ");
+    console.log(str)
+    // 2.문자를 배열로만들기
+    const str2 = "딸기,수박,귤,체리,포도";
+    str2.split("");
+    console.log(str2);
+    // 3.배열반전 (원래배열을 반전시키고 리턴)
+    const arr2= [1,2,3,4,5];
+    arr2.reverse();
+    console.log(arr2);
+
+    // 4배열의 일부분을 새로운 배열로 생성
+    const arr3 = [1,2,3,4,5];
+    // arr4=[2,3,4];
+    let arr4= arr3.slice(1,4);
+    console.log(arr3);
+    console.log(arr4);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+/* common style area */
+* { margin: 0; padding:  0; box-sizing: border-box; }
+a { text-decoration:  none; color: inherit;}
+li{ list-style: none;}
+address {font-style: normal;}
+img {vertical-align: top; border: 0;}
+:root {
+    --main-color1: #7b70ac; 
+    --main-color2: #ba70a5;
+    --main-color3: #c19596;
+    --main-color4: #c2b497;
+    --main-op-color1: rgba(123,112,172,0.7);
+    --main-op-color2: rgba(186,112,165,0.7);
+    --main-op-color3: rgba(193,149,150,0.7);
+    --main-op-color4: rgba(194,180,151,0.7);
+}
+
+body {
+    font-family: "나눔 고딕" , "맑은 고딕",sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #2d2d2d;
+    background-color: #ccc;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 1;
+}
+header > ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+}
+header > ul li {
+    padding-right: 20px;
+}
+.mobile {
+    display: none;
+}
+header > div {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+    color: #fff;
+}
+header > div h1 {
+    width: 20%;
+    min-width: 180px;
+}
+header > div h1 img{
+    width: 80;
+}
+header > div ul {
+    display: flex;
+}
+.nav li {
+    padding: 0 20px;
+}
+.sns li {
+    padding: 10 20px;
+    background-color: blueviolet;
+    margin: 0 5px;
+}
+.inner {
+    width: 1005;
+    max-width: 1200px;
+    margin:  0 auto;
+}
+.visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    position: relative;
+    background: url(/img/main_visual.jpg) center center/ cover no-repeat;
+}
+.visual ul {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 300px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+}
+.visual ul li {
+    width: 25%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+.visual ul li div {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.visual > ul > li {
+    width: 25%;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    height: 300px;
+}
+.visual > ul > li div {
+    position: absolute; left: 0; width: 100%;
+}
+.visual ul li .rollout {
+    bottom:  0;
+    height: 120px;
+}
+.visual ul li .rollover {
+    top: 100%;
+    height: 300px;
+    padding: 0 30px;
+}
+.visual ul li:hover .rollout {
+    bottom: -180px;
+}
+.visual ul li:hover .rollover{
+    top: 0;
+}
+.visual > ul > li:nth-child(1) .rollout {background: var(--main-color1);}
+.visual > ul > li:nth-child(2) .rollout {background: var(--main-color2);}
+.visual > ul > li:nth-child(3) .rollout {background: var(--main-color3);}
+.visual > ul > li:nth-child(4) .rollout {background: var(--main-color4);}
+.rollout {
+    bottom: 0;
+    height: 120px;
+    padding: 30px 20px;
+    transition: 0.3s;
+}
+
+.visual > ul > li:nth-child(1) .rollover {background: var( --main-op-color1);}
+.visual > ul > li:nth-child(2) .rollover {background: var( --main-op-color2);}
+.visual > ul > li:nth-child(3) .rollover {background: var( --main-op-color3);}
+.visual > ul > li:nth-child(4) .rollover {background: var( --main-op-color4);}
+.rollover {
+    height: 300px;
+    top:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.5s;
+}
+.go {
+    width: 51px;
+    height: 51px;
+    font-size: 0;
+    background:  url(/img/main_tab_btn_view.png) left top no-repeat;
+}
+.go:hover {
+    background-position: left bottom;
+}
+.open div {
+    padding: 30px;
+    text-align: center;
+}
+.open div h2 {
+    font-size: 32px;
+}
+.open ul {
+    display: flex;
+}
+.open ul li {
+    width: 25%;
+}
+.open ul li img {
+    width: 100%;
+}
+.review {
+    display: flex;
+}
+.review >div {
+    width: 50%;
+}
+.realres {
+    background:  url(/img/main_real_res_visual.jpg) center center/ cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    text-align: center;
+    padding: 70px;
+}
+.realres h3 {
+    padding-top:100px;
+    padding-bottom: 30px;
+}
+.realres p {
+    padding-bottom: 50px;
+}
+.realbtn {
+    background-color: blueviolet;
+    border-radius: 6px;
+    padding: 20px;
+    color: #fff;
+}
+.bestre ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.bestre ul li {
+    width: 50%;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+}
+.bestre ul li img {
+    width: 100%;
+}
+.bestre ul li div:not(.besticon) {
+    padding: 16px;
+}
+.besticon {
+    background-color: blueviolet;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    padding: 10px 20px;
+}
+.quickmenu ul {
+    display: flex;
+}
+.quickmenu ul li {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+.quickmenu ul li:nth-child(1) {
+    background-color: var(--main-color1);
+}
+.quickmenu ul li:nth-child(2) {
+    background-color: var(--main-color2);
+}
+.quickmenu ul li:nth-child(3) {
+    background-color: var(--main-color3);
+}
+.quickmenu ul li:nth-child(4) {
+    background-color: var(--main-color4);
+}
+footer {
+    background: url(/img/footer_visual.jpg)center top;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px 100px;
+}
+footer address {
+    padding: 20px 0;
+}
+.menu {
+    width: 40px;
+    height: 40px;
+    background-color: #7b70ac;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin:  5px 0;
+}
+@media screen and (max-width:1024px){
+    header .web {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }.menu {
+        display: flex;
+    }
+    .visual ul {
+        display: none;
+    }
+    .open ul {
+        flex-wrap: wrap;
+    }
+    .open ul li {
+        width: 50%;
+    }
+    .review {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .review >div {
+        width: 100%;
+    }
+    .quickmenu ul {
+        flex-wrap: wrap;
+    }
+    .quickmenu ul li {
+        width: 50%;
+    }
+    @media screen and (max-width:768px){
+        .open ul {
+            flex-wrap:wrap;
+        }
+        .open ul li {
+            width: 100%;
+        }
+    }
+
+
+    
+}

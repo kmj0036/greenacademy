@@ -1,0 +1,143 @@
+body {
+  font-family: "Poiret One", cursive;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  display: flex;
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+body header {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  position: re;
+  width: 100%;
+  height: 80px;
+}
+body header h1 {
+  background: url(../image/logo2.png) center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  height: 80px;
+  width: 20%;
+  font-size: 0;
+}
+body header ul {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+body header ul li {
+  line-height: 50px;
+  padding: 10px;
+}
+body .content .quick {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #222;
+}
+body .content .main-content ul {
+  display: grid;
+  grid-template-rows: repeat(4, 250px);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "a a a b b" "a a a c d" "e f f g h" "i i j k l";
+}
+body .content .main-content ul .bg {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+body .content .main-content ul li {
+  position: relative;
+}
+body .content .main-content ul li .txt {
+  padding: 40px;
+  height: 100%;
+}
+body .content .main-content ul li .txt strong {
+  font-size: 36px;
+}
+body .content .main-content ul li span {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  font-size: 52px;
+  font-weight: bold;
+  color: #fff;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s;
+}
+body .content .main-content ul li:nth-child(1) {
+  position: relative;
+  grid-area: 1/1/3/4;
+}
+body .content .main-content ul li:nth-child(1) .bg1 {
+  background-image: url(../image/pic1.jpg);
+}
+body .content .main-content ul li:nth-child(1) span {
+  font-size: 136px;
+  line-height: 136px;
+  bottom: -16px;
+}
+body .content .main-content ul li:nth-child(2) {
+  grid-area: 1/4/2/6;
+}
+body .content .main-content ul li:nth-child(3) {
+  grid-area: 2/4/3/5;
+  background-color: #bff7fa;
+}
+body .content .main-content ul li:nth-child(4) {
+  grid-area: 2/5/3/6;
+}
+body .content .main-content ul li:nth-child(4) .bg2 {
+  background-image: url(../image/pic2.jpg);
+}
+body .content .main-content ul li:nth-child(5) {
+  grid-area: 3/1/4/2;
+}
+body .content .main-content ul li:nth-child(5) .bg3 {
+  background-image: url(../image/pic3.jpg);
+}
+body .content .main-content ul li:nth-child(6) {
+  grid-area: 3/2/4/4;
+}
+body .content .main-content ul li:nth-child(7) {
+  grid-area: 3/4/4/5;
+}
+body .content .main-content ul li:nth-child(7) .bg4 {
+  background-image: url(../image/pic4.jpg);
+}
+body .content .main-content ul li:nth-child(8) {
+  grid-area: 3/5/4/6;
+}
+body .content .main-content ul li:nth-child(9) {
+  grid-area: 4/1/5/3;
+}
+body .content .main-content ul li:nth-child(9) .bg5 {
+  background-image: url(../image/pic5.jpg);
+}
+body .content .main-content ul li:nth-child(10) {
+  grid-area: 4/3/5/4;
+}
+body .content .main-content ul li:nth-child(10) .bg6 {
+  background-image: url(../image/pic6.jpg);
+}
+body .content .main-content ul li:nth-child(11) {
+  grid-area: 4/4/5/5;
+}
+body .content .main-content ul li:nth-child(12) {
+  grid-area: 4/5/5/6;
+}
+body .content .main-content ul li:nth-child(12) .bg7 {
+  background-image: url(../image/pic7.jpg);
+}

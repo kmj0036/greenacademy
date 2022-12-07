@@ -1,0 +1,26 @@
+// mixins 재활용
+
+// mixin 선언 @mixin
+// mixin 사용하기 @include
+// @mixin의 이름 {스타일 작성;}
+// 매개변수가 있을때 @mixin 이름 () {스타일 작성
+@mixin largetext {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "나눔 고딕";
+    color: red;
+    &::after {
+        content: "hello";
+    }
+}
+h2 {
+    @include largetext();
+} 
+
+@mixin dash-line ($width:1px,$color:black) {
+    border: $width dashed $color;
+}
+.box1 { @include dash-line(1px,red );}
+.box2 { @include dash-line(5px,blue );}
+.box3 { @include dash-line( );}
+.box4 {@include dash-line($color:pink )}

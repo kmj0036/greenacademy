@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {padding: 0; margin: 0; box-sizing: border-box;}
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body > div {
+            width: 80%;
+            max-width: 1000px;
+            border-radius: 20px;
+            border: 3px solid palevioletred;
+            overflow: hidden;
+        }
+        #title {
+            padding: 30px;
+            color: #fff;
+            background-color: palevioletred;
+        }
+        #inputs {
+            text-align: center;
+            padding: 30px;
+        }
+        input {
+            outline: none;
+            border: none;
+            border-bottom: 1px dotted palevioletred;
+            margin:  0 10px;
+            line-height:  40px;
+        }
+        button {
+            border-radius: 8px;
+            background-color: palevioletred;
+            padding: 10px 40px;
+            margin: 0 6px;
+            outline: none;
+            border:  none;
+            color: #fff;
+
+        }#text {
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="title">
+            <h2>기념일</h2>
+            <p>날짜를 입력하시오</p>
+        </div>
+        <div>
+            <div id="inputs">
+                <input type="text" id="year" name="year">
+                <input type="text" id="month" name="month">
+                <input type="text" id="date" name="date">
+            </div>
+            <div id="buttons">
+                <button data-key="data" data-value="50">50일뒤</button>
+                <button data-key="data" data-value="100">100일뒤</button>
+                <button data-key="data" data-value="today">오늘</button>
+            </div>
+        </div>
+        <div id="text"></div>    
+    </div>
+    <script>
+        const yearInput= document.querySelector("#year");
+        const monthInput= document.querySelector("#mnoth");
+        const dateInput= document.querySelector("#date");
+        const btns= document.querySelector("#buttons");
+        const text= document.querySelector("#text");
+
+        // 인풋값 확인하는 함수
+        function getInputValue(){
+            // input 값이 없다면 종료,
+            if(!yearInput.value||!monthInput.value||!dateInput.value){
+                console.log(yearInput.value,monthInput.value,dateInput.value)
+                alert("날짜를 입력해주세요");
+                return;
+            }
+            if(isNaN(Number(yearInput.value))||isNaN(Number(monthInput.value))||isNaN(Number(dateInput.value))){
+                console.log(yearInput.value,monthInput.value,dateInput.value);
+                alert("숫자만");
+                return
+            }
+            const firstDay = {
+                year:Number(yearInput.value),
+                Number:Number(monthInput.value)=1,
+                date:Number(dateInput.value)
+            }   
+            return firstDay;
+        }              
+    </script>
+</body>
+</html>

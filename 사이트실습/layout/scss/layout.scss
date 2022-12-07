@@ -1,0 +1,77 @@
+$default-padding: 16px;
+$bgcolor:#f1f1f1;
+$lightcolor:#fff;
+$darkcolor: #333;
+$mediumcolor: #555;
+$leftwidth: 75%;
+$rightwidth: 25%;
+
+@mixin flexbox ($dir:row,$justify:space-between,$align:center){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+    @content;
+}
+body {
+    font: {
+        family: "맑은 고딕" ,sans-serif;
+        size: 14px;
+    }
+    line-height: 1.6
+
+}
+#wrap {
+    background-color:$bgcolor ;
+    padding: $default-padding;
+}
+#header {
+    background-color: $lightcolor;
+    height: 150px;
+    text-align: center;
+    margin-bottom: $default-padding;
+    #headerTitle {
+        height: 120px;
+        padding-top:25px;
+    }
+    #headerMenu {
+        background-color: $darkcolor;
+        color: $lightcolor;
+        @include flexbox();
+        height: 30px;
+        ul {
+            @include flexbox();
+        }
+        a {
+            padding: 0 $default-padding;
+        }
+    }
+}
+#contents {
+    @include flexbox($align:flex-start);
+    #left {
+        width: $leftwidth;
+    }
+    #right {
+        width: $rightwidth;
+        padding-left: $default-padding;
+    }
+    .whiteBg {
+        background-color: $lightcolor;
+        padding: $default-padding;
+        margin-bottom: $default-padding;
+        .grayBg {
+            background: $mediumcolor;
+            color: $lightcolor;
+            height: 120px;
+            padding: 8px;
+            margin: 8px 0;
+        }
+    }
+}
+#footer {
+    text-align: center;
+    background-color: $mediumcolor;
+    color: $lightcolor;
+    padding:  $default-padding 0;
+}

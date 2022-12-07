@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+        #outline {
+            display: flex;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 600px;
+            height: 400px;
+            /* overflow: hidden; */
+        }
+        @keyframes flowleft {
+            /* 왼쪽으로 600이동 */
+            0%{
+                left:-600px
+            }
+
+            33%{
+                /* display를 none주고 오른쪽으로 1200이동 */
+            }
+
+            66%{
+                /* display를 block으로 주고 대기 */
+            }
+                /* 왼쪽으로 600이동 */
+            100%{}
+        }
+        .fadeImg {
+            width: 600px;
+            height: 400px;
+            /* animation: fadein 1s; */
+        }
+    </style>
+</head>
+<body>
+    <div id="outline">
+        <div class="fadeImg"><img src="./images/img_lights1.jpg" alt=""></div>
+        <div class="fadeImg"><img src="./images/img_lights2.jpg" alt=""></div>
+        <div class="fadeImg"><img src="./images/img_lights3.jpg" alt=""></div>
+        <div class="fadeImg"><img src="./images/img_lights4.jpg" alt=""></div>
+    </div>
+    <script>
+        let imgDivs =document.querySelectorAll(".fadeImg");
+        let indexNum= 0;
+        let nextNum;
+        imgDivs.forEach(div=>div.style.display="");
+        imgDivs[0].style.display ="block"
+        // 1,2,3은 왼쪽으로 600px씩 4는 오른쪽으로 1800이동하게 하기
+        setInterval(function(){
+            if (nextNum>=3){
+                fadeImg.position.left
+            }
+        },5000)
+    </script>
+    <!-- fadein으로 사라지게 하기 -->
+     <!-- <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+        @keyframes fadein {
+            0%{opacity: 0.4;}
+            100%{opacity: 1;}
+        }
+        .fadeImg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            animation: fadein 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="fadeImg"><img src="./images/img_lights1.jpg" alt=""></div>
+    <div class="fadeImg"><img src="./images/img_lights2.jpg" alt=""></div>
+    <div class="fadeImg"><img src="./images/img_lights3.jpg" alt=""></div>
+    <div class="fadeImg"><img src="./images/img_lights4.jpg" alt=""></div>
+    <script>
+        let imgDivs =document.querySelectorAll(".fadeImg");
+        let indexNum= 0;
+        let nextNum;
+        imgDivs.forEach(div=>div.style.display="none");
+        imgDivs[0].style.display ="block"
+        setInterval(function(){
+            nextNum = (indexNum+1)%4;
+            imgDivs[indexNum].style.display="none";
+            imgDivs[nextNum].style.display="block";
+            indexNum = nextNum;
+        },5000)
+    </script> -->
+</body>
+</html>

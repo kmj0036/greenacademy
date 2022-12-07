@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체.메서드() =>일때 this는 객체에 바인딩.
+        // dom 이벤트가 발생할때 =>this는 dom에 바인딩.
+        let stu = {
+            name:"gg",
+            age:30
+        }
+        function printName(){
+            console.log(this.name)
+        }
+        function updateObj(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        printName.call(stu);
+        updateObj.call(stu,"aaa",20)
+        console.log(stu);
+
+
+        const aa = {
+            x:50,
+            getX: function(){
+                return this.x;
+            }
+        }
+        const newFun= aa.getX;
+        // newFun = function(){ return this.x}
+        const nnewFun= newFun.bind(aa)
+        console.log(newFun());
+        console.log(nnewFun());
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.list {
+    $w:100px;
+    $h:50px;
+    li {
+        width:$w;
+        height: $h;
+    }
+    @at-root .box {
+        width:$w;
+        height: $h;
+    }
+}
+//  @at-root
+// 중첩 내부에서 작성은 하지만 바깥에서 사용해야하는 경우
+// 변수의 유효범위는 선언한 {}블록 내부에서만 유효범위의다
+//  !global 플래그 
+// 변수의 유효범위를 scss 전체로 설정
+div id="header"{
+    $w:100px
+    $h:50px
+    ul {
+        li{
+        width:$w;
+        height:$h;
+        }
+    }
+}

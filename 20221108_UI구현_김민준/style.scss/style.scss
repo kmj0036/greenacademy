@@ -1,0 +1,79 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+#wrap {
+    display: flex;
+    width: 100%;
+    height: 2500px;
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+    background: url(../images/십리대숲.jpg)center center/cover no-repeat ;
+    color: #fff;
+}
+header {
+    margin: 50px 0;
+    font-size: 40px;
+    font-weight: bold;
+    background: url(../images/top_logo.png)center center no-repeat;
+    height: 200px;
+    background-size: 25%;
+    
+}
+maincontent{
+    background-color: rgba($color: #ccc, $alpha: 0.5);
+    width: 60%;
+    margin: 0 auto;
+    height: 1500px;
+    padding: 100px;
+    border: 1px solid #222;
+    h2 {
+        text-align: start;
+        padding: 20px 0;
+    }
+    input {
+        height: 50px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    button {
+        margin-top: 100px;
+        width: 50%;
+        height: 60px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    #birth {
+        display: flex;
+        justify-content: space-between;
+        input {
+            width: 30%;
+            text-align: center;
+       
+        
+        }
+        select{
+            width: 30%;
+            text-align: center;
+        }
+        
+    }
+    #gender {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        input {
+            width: 10%;
+        }
+        p{
+            font-size: 24px;
+        }
+    }
+    #email {
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+        select {
+            height: 50px;
+        }
+    }
+}

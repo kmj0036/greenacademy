@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;box-sizing: border-box;}
+        body{background-color: #444;}
+        #wrap {
+            width: 100%;
+            max-width: 1000px; 
+            margin: 0 auto;
+            color:  #fff;
+        }
+        h2 {
+            padding:  20px 0;
+            font-size: 34px;
+        }
+        #wrap > div {
+            padding: 30px;
+        }
+        li {
+            list-style: none;
+            float: left;
+            width: 48%;
+            position: relative;
+            overflow: hidden;
+        }
+        li:nth-child(1) {
+            margin-right: 4%;
+        }
+        li img {
+            width: 100%;
+        }
+        .blackbg {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+        .clearboth::after {
+            clear: both;
+            content: "";
+            display: block;
+        }
+        h3, p {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.5s;
+        }
+        h3 {
+            top: 34%;
+            font-size: 24px;
+        }
+        p {
+            top:56%
+        }
+        img {vertical-align:  top;}
+        /* 이거 안주면 img 태그가 떠있어서 요소에 붙지않아 더러움 reset.css에 포함시키기 */
+        #wrap > div:nth-child(1) li::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            right: 30px;
+            left: 30px;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            transform: scale(0,1);
+            transition: 0.5s;
+            z-index: 2;
+        }
+        #wrap > div:nth-child(1) li::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            right: 30px;
+            left: 30px;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+            transform: scale(1,0);
+            transition: 0.5s;
+
+        }
+        #wrap > div:nth-child(1) li .blackbg {
+            opacity: 1;
+        }
+        #wrap > div:nth-child(1) li h3 {
+            top: 30%;
+        }
+        #wrap > div:nth-child(1) li p {
+            top: 40% ;
+            opacity: 0;
+        }
+        /* 첫번째 div 안에잇는 li에 마우스를 올릴때 */
+        #wrap > div:nth-child(1) li:hover::before {
+            transform: scale(1,1);
+        }
+        #wrap > div:nth-child(1) li:hover::after {
+            transform: scale(1,1);
+        }
+        #wrap > div:nth-child(1) li:hover p {
+            opacity: 1;
+            top: 50%;
+        }
+        #wrap > div:nth-child(1) li:hover h3 {
+            top: 40%;
+        }
+        /* 2번째 div 스타일 */
+        #wrap > div:nth-child(2) li p {
+            opacity: 0;
+            transition: 0.5s;
+        }
+        #wrap > div:nth-child(2) li h3 {
+            top: 30%;
+        }
+        #wrap > div:nth-child(2) li::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            border: 1px solid #fff;
+            transform: scale(1.3);
+            transition: 0.5s;
+        }
+        #wrap > div:nth-child(2) li img {
+            transform: scale(1.2);
+            transition: 0.5s;
+        }
+        /* hover 사용했을때  */
+        #wrap > div:nth-child(2) li:hover img {
+            transform: scale(1);
+        }
+        #wrap > div:nth-child(2) li:hover .blackbg {
+            opacity: 1;
+        }
+        #wrap > div:nth-child(2) li:hover::after {
+            transform: scale(1);
+        }
+        #wrap > div:nth-child(2) li:hover p {
+            opacity: 1;
+        }
+        /* 3번째 div 스타일 영역 */
+        #wrap > div:nth-child(3) li::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            top: 50%;
+            height: 1px;
+            background-color: #fff;
+            transition: 0.5s;
+            z-index: 2;
+        }
+        #wrap > div:nth-child(3) li::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            top: 50%;
+            height: 1px;
+            background-color: #fff;
+            transition: 0.5s;
+        }
+        /* 3번째 div hover스타일 */
+        #wrap > div:nth-child(3) li:hover::before {
+            transform: rotate(45deg);
+        }
+        #wrap > div:nth-child(3) li:hover::after {
+            transform: rotate(-45deg);
+        }
+        #wrap > div:nth-child(3) li h3 {
+            top: 30%;
+        }
+        #wrap > div:nth-child(3) li p {
+            top: 60%;
+        }
+        #wrap > div:nth-child(3) li:hover h3 {
+            top: 34px;
+        }
+        #wrap > div:nth-child(3) li:hover p {
+            top: 56%;
+        }
+        #wrap > div:nth-
+        child(3) li:hover .blackbg {
+            opacity: 1;
+        }
+        /* 4번째 div stlye */
+        #wrap > div:nth-child(4) h3 {
+            left: 30px;
+            transform: translateX(0);
+            top: 60px;
+        }
+        #wrap > div:nth-child(4) p {
+            top: 100px;
+            left: 100%;
+            width: 70%;
+            transform: translateX(0);
+
+        }
+        #wrap > div:nth-child(4) li::after {
+            position: absolute;
+            content: "";
+            display: block;
+            left: 30px;
+            width: 0;
+            height: 6px;
+            top: 96px;
+            background-color: #fff;
+            transition: 0.5s;
+        }
+        /* 4번째 div hover */
+        #wrap > div:nth-child(4) li:hover::after {
+            width:calc(100% - 60px);
+        }
+        #wrap > div:nth-child(4) li:hover p{
+            left: 30px;
+        }
+        #wrap > div:nth-child(4) li:hover .blackbg {
+            opacity: 1;
+        }
+        #wrap > div:nth-child(4) li:hover::after{
+            width: calc(100% - 60px);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 1번div -->
+        <div>
+            <h2>hover01</h2>
+            <ul class="clearboth">
+                <li>
+                    <img src="./images (3)/1.jpg" alt="">
+                    <div class="blackbg"></div>
+                    <h3>hover effect</h3>
+                    <p>green web</p>
+                </li>
+                <li>
+                    <img src="./images (3)/2.jpg" alt="">
+                    <div class="blackbg"></div>
+                    <h3>hover effect</h3>
+                    <p>green web</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 1번 div 종료 -->
+        <!-- 2번 div 시작 -->
+        <div>
+            <h2>hover02</h2>
+            <ul class="clearboth">
+                <li>
+                    <img src="./images (3)/3.jpg" alt="">
+                    <div class="blackbg"></div>
+                    <h3>hover effect</h3>
+                    <p>green web</p>
+                </li>
+                <li>
+                    <img src="./images (3)/4.jpg" alt="">
+                    <div class="blackbg"></div>
+                    <h3>hover effect</h3>
+                    <p>green web</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 2번 div 종료 -->
+        <!-- 3번 div 시작 -->
+        <div>
+            <h2>hover03</h2>
+            <ul class="clearboth">
+                <li>
+                    <img src="./images (3)/1.jpg" alt="">
+                    <div class="blackbg"></div>
+                    <h3>hover effect</h3>
+                    <p>green web</p>
+                </li>
+                <li>
+                    <img src="./images (3)/2.jpg" alt="">
+                    <div class="blackbg"></div>
+                    <h3>hover effect</h3>
+                    <p>green web</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 3번div 종료 -->
+        <!-- 4번 div 시작 -->
+        <div>
+            <h2>hover04</h2>
+            <ul class="clearboth">
+                <li>
+                    <img src="./images (3)/3.jpg" alt="">
+                    <div class="blackbg"></div>
+                    <h3>hover effect</h3>
+                    <p>green web</p>
+                </li>
+                <li>
+                    <img src="./images (3)/4.jpg" alt="">
+                    <div class="blackbg"></div>
+                    <h3>hover effect</h3>
+                    <p>green web</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 4번 div 종료 -->
+    </div>
+</body>
+</html>

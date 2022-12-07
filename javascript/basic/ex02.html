@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+        #wrap {
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100vh;
+        }
+        #left {
+            width: 15%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 56px;
+        }
+        #left >div {
+            padding: 50px 0;
+        }
+        #right {
+            width: 15%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 56px;
+            font-weight: bold;
+        }
+        li {
+            border: 2px solid #ccc;
+            margin: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul id="left">
+            <li>나이</li>
+            <li>버스요금</li>
+        </ul>
+        <ul id="right">
+            <li id="age"></li>
+            <li id="busfare"></li>
+        </ul>
+    </div>
+    <!-- 7세이하 0원
+    8세이상 13세 이하 450원
+    14세 이상 19세 이하 720원
+    20세 이상 1200원
+    70세이상 0원 -->
+<!--  document.getElementsByClassName("divbox")[0].innerHTML = "html컬랙션";
+        document.getElementsByTagName ("p") [0].innerHTML= "p의 내용을 변경"; -->
+    <!-- if (!id) {
+        //     alert ("id입력하지 않음") -->
+    <script>
+        let age =prompt("나이를 입력하시오");
+        let busfare = 0;
+        if (!age){
+            alert ("나이를 알수없습니다.")
+        }
+        else if (age<= 7) {
+            busfare=0;
+        } 
+        else if(8<=age&&age<=13) {
+            busfare= 450;
+        }
+        else if(14<=age&&age<=19){
+            busfare=720;
+        }
+        else if(20<=age&&age<70){
+            busfare=1200;
+        }
+        else {
+            busfare=0;
+        }
+        let afteragetext = "살";
+        if (age<=20) {
+            afteragetext="살";
+        }
+        else {
+            afteragetext="세";
+        }
+        document.getElementById("age").innerHTML =(age+afteragetext)
+        document.getElementById("busfare").innerHTML=(busfare+"원")
+    </script>
+</body>
+</html> -->

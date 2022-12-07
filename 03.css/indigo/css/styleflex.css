@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, Helvetica,'맑은 고딕', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+  }
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+  #header h1 {
+    font-size: 36px;
+    justify-content: space-between;
+  }
+  #header ul {
+    display: flex;
+  }
+  #header ul li {
+    padding: 0 10px;
+  }
+
+  .mobile {
+    width: 60px;
+    height: 60px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+  }
+  .mobile span {
+    width: 50%;
+    height: 4px;
+    background-color: #3f51b5;
+    margin: 3px 0;
+  }
+  #visual img {
+    width: 100%;
+  }
+  .inner_con {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .title {
+    padding: 30px 0;
+  }
+  .title h2 {
+    color: #3f51b5;
+    font-size: 34px;
+  }
+  #weare .title {
+    display: flex;
+    align-items: center;
+  }
+  #weare .title h2 {
+    width: 40%;
+  }
+  #weare .title p {
+    position: relative;
+    padding-left:50px ;
+  }
+  #weare .title p::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 40px;
+    background-color: #ddd;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #weare ul {
+    display: flex;
+}
+#weare ul li {
+    width: 25%;
+    padding: 30px;
+    text-align: center;
+  }
+#weare ul li img {
+    height: 60px;
+    width: auto;
+}  
+#weare li h3 {
+    color:#3f51b5;
+    padding: 10px 0;
+  }
+  #weare li p {
+    line-height: 1.2;
+    color: #888;
+  }
+  #work ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #work ul li {
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+  }
+  #work ul li img {
+    width: 100%;
+  }
+  #work li .bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #3f51b5;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: 0.5s;
+    }
+    /* transition 속기법(duration delay property timing-function)
+    transition- duration
+    transition-delay
+    transition-property
+    transition-timing-function
+    */
+    .desc {
+      position: absolute;
+      left: 50px;
+      top: -100px;
+      color: #fff;
+      transition: 0.5s;
+    }
+    #work ul li:hover .bg {
+        opacity: 0.5;
+    }
+    #work li .bg .desc {
+        top:50px;
+    }
+    #blog {
+        display: flex;
+    }
+    #blog .title {
+        width: 30%;
+    }
+    #blog ul {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #blog ul li {
+        width: 30%;
+    }
+    #blog ul li img {
+        width: 100%;}
+        /* container id를 가진요소의 자식 요소 .inner_con 요소 */
+    
+    #container > div:not(:first-child) {
+        padding:60px 0; }
+    #contact {
+        display: flex;
+    }
+    #contact .title {
+        width: 30%;
+    }
+    #contact ul {
+        width: 70%;
+    }
+    #contact button {
+        background-color: #3f51b5;
+        color: #fff;
+        text-align: center;
+        padding: 16px 30px;
+        border: 0;
+        outline: 0;
+        float: right;
+      }
+      form div div {
+        float:left;
+        width: 49%;
+      }
+      form div div input {
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        line-height: 50px;
+        outline: 0;
+      }
+      form textarea {
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        height: 160px;
+        width: 49%;
+        margin-left: 2%;
+      }
+      #footer {
+        text-align: center;
+        padding: 30px;
+      }
+       /*1024px 이하  */
+    @media screen and (max-width: 1024px) {
+        .title {
+        text-align: center;
+        }
+        #weare .title {
+        flex-direction: column;
+        }
+     
+        #weare .title h2 {
+        width: 100%;
+        }
+        #weare .title p::before {
+        display: none;
+        }
+        #wrare .title p {
+            width: 100%;
+            padding-left: 0;
+        }
+        #weare ul {
+            flex-wrap: wrap;
+        }
+        #weare ul li {
+            width: 50%;
+        }
+        #work ul li {
+            width: 50%;
+        }
+        #blog, #contact {
+            flex-direction: column;
+        }
+        #blog .title, #contact .title {
+            width: 100%;
+        }
+        #blog ul {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        #contact ,formdiv {
+            width: 100%;
+        }
+        @media screen and (max-width:768px) {
+            .mobile {
+                display: flex;
+            }
+        #header ul {
+            display: none;
+        }
+        #weare ul li, #work ul li, #bolg ul li{
+            width: 100%;
+        }
+        form > div {
+            display: flex;
+            flex-direction: column;
+        }
+        form div div {
+            width: 100%;
+        }
+        form textarea {
+            width: 100%;
+        }
+    }
+        
+
+    

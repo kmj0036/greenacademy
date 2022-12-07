@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { padding: 0; margin: 0; box-sizing: border-box; color: #fff;}
+   
+        p { 
+            text-align: center;
+            font-size: 24px;
+        }
+        #wrap {
+            margin: 60px;
+            height: 90vh;
+            background-color: black;
+        }
+        #up {
+            background-color: burlywood;
+            height: 60vh;
+            border: 1px solid #fff;
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+        
+        #ano{
+            height: 15vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 150px;
+        }
+        #ano p {
+            width: 15%;
+        }
+        #ano div {
+            width: 15%;
+            height: 5vh;
+        }
+        #upcen {
+            display: flex;
+            width: 100%;
+            height: 30vh;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+        #upcen div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #upcen div p {
+            width: 100%;
+        }
+        #upcen div div {
+            width: 60%;
+            height: 8vh;
+        }
+        .backb {
+            background-color: black;
+            text-align: center;
+        }
+        .box {
+            height: 30vh;
+            width: 30%;
+            border: #fff 1px solid;
+            display: flex;
+            flex-direction: column;
+        }
+        #noti{
+            height: 15vh;
+            width: 100%;
+        }
+        #down {
+            height: 400px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        button {
+            width: 150px;
+            height: 70px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="up">
+            <div id="ano">
+            <p>남은 슛횟수</p>
+            <div id= "left"class="backb"></div>
+            </div>
+            <div id="upcen">
+                <div id="onle" class="box">
+                    <p>컴퓨터</p>
+                    <div id="computerscore" class="backb"><p>0</p></div>
+                </div>
+                <div id="onri" class="box">
+                    <p>사람</p>
+                    <div id="Userscore" class="backb"><p>0</p></div>
+                </div>
+            </div>
+            <p id="noti"></p>
+        </div>
+        <div id="down">
+            <div id="downle">
+                <p>컴퓨터</p>
+                <button onclick="shootran()">슛하기</button>
+            </div>
+            <div id="downri">
+                <p>사용자</p>
+                <button onclick="userran2()" disabled=>2점슛</button>
+                <button onclick="userran3()" disabled>3점슛</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let comscore= 0;
+        let userscore= 0;
+        let ShootLeft=3;
+        let iscomputerturn =true;
+
+        // 남은 횟수
+        let ShootLeftem = document.querySelector("#left").innerHTML=ShootLeft;
+        // 2점 버튼
+        function userran2() {
+            let randomscore=Math.floor(Math.random()*2)          
+            if(randomscore==0){
+                document.querySelector("#noti").innerHTML="2점슛을 실패했습니다."
+                userscore=userscore+0;
+                document.querySelector("#Userscore").innerHTML =userscore;
+            }else {
+                document.querySelector("#noti").innerHTML="2점슛을 성공했습니다."
+                userscore=userscore+2;
+                document.querySelector("#Userscore").innerHTML =userscore;
+            }        
+        }
+        userran3();
+          // 3점 버튼
+          function userran3() {
+            let score3= Math.ceil(Math.random()*10)
+                if(score3<=3){
+                document.querySelector("#noti").innerHTML="3점슛을 성공했습니다."
+                userscore=userscore+3;
+                document.querySelector("#Userscore").innerHTML =userscore;
+            }else {
+                document.querySelector("#noti").innerHTML="3점슛을 실패했습니다."
+                userscore=userscore+0;
+                document.querySelector("#Userscore").innerHTML =userscore;
+            }        
+        }
+        userran3();
+
+        // 컴퓨터 score
+        function shootran(){
+            let randomscore=Math.floor(Math.random()*2)
+            if (randomscore==0){
+                let score2= Math.floor(Math.random()*2)
+                if(score2==0){
+                    document.querySelector("#noti").innerHTML="컴퓨터가 2점슛을 실패했습니다."
+                    comscore=comscore+0;
+                    document.querySelector("#computerscore").innerHTML =comscore;
+                }else {
+                    document.querySelector("#noti").innerHTML="컴퓨터가 2점슛을 성공했습니다."
+                    comscore=comscore+2;
+                    document.querySelector("#computerscore").innerHTML =comscore;
+                }
+            }else {
+                let score3= Math.ceil(Math.random()*10)
+                if(score3<=3){
+                    document.querySelector("#noti").innerHTML="컴퓨터가 3점슛을 성공했습니다."
+                    comscore=comscore+3;
+                    document.querySelector("#computerscore").innerHTML =comscore;
+                    // 랜덤스코어3이 1,2,3이면 3점을 더하고
+                }else{
+                    document.querySelector("#noti").innerHTML="컴퓨터가 2점슛을 성공했습니다."
+                    comscore=comscore+0;
+                    document.querySelector("#computerscore").innerHTML =comscore;
+                    // 아닐경우 (4~10이면) 0점을 더해라 
+                }
+            }
+        }
+        iscomputerturn=false;
+        // userBtns.forEach(btn=>{
+        // btn.disabled= false;
+        // })
+        // comBtns.disabled= true;
+        shootran();
+
+        /*userBtns.forEach(btn=>{
+            btn.disabled=ture;
+        })
+        comBtn.disbled = false;
+        --shortsLeft;
+        shortleftElen.innerHtml =shortleft;
+        */
+        </script>
+</body>
+</html>

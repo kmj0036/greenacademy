@@ -1,0 +1,18 @@
+@mixin positon ($p:absolute,$t:null,$b:null,$l:null,$r:null) {
+    position:$p;
+    top:$t;
+    bottom:$b;
+    left:$l;
+    right:$r;
+}
+.absolute {
+    // keyword 인수로 설정할 값만 전달
+    @include positon($t:50px,$r:50px);
+}
+.fixed {
+    @include positon(
+        $p:fixed,
+        $t:20px,
+        $l:10px
+        );
+}

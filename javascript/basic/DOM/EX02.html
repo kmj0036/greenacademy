@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        wrap {
+            position: relative;
+        }
+        header{
+            background-color: aquamarine;
+            height: 50px;
+            display: flex;
+        }
+        header h1 {
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            text-align: center;
+        }
+        header span{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 50%;
+            width: 10%;
+            
+        }
+        header span div {
+            width: 50px;
+            height: 5px;
+            background-color: #fff;           
+        } 
+        #side {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            width: 0;
+            height: 100vh;
+            background-color: blue;
+        }
+        .pop_out {
+            width: 20%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <span id="menubt">
+                <div></div>
+                <div></div>
+                <div></div>
+            </span>
+            <h1>Logo</h1>
+        </header>
+        <div id="side"></div>
+        <body>
+            
+        </body>
+        <footer></footer>
+    </div>
+    <script>
+        let span =document.querySelector("span");
+        let  side =document.querySelector("#side")
+        span.addEventListener("click",function(){
+            span.classList.toggle("pop_out")
+        })
+    </script>
+</body>
+</html>

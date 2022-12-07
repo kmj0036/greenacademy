@@ -1,0 +1,111 @@
+// 변수 지정
+$default-space:16px;
+$white:#fff;
+$black:black;
+$header-height:80px;
+// mixin 선언
+@mixin flexbox ($dir:row, $jus:space-between,$ali:center){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $ali;
+}
+.inner_con {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+body {
+    font-size: 14px;
+    font-family: "맑은 고딕",sans-serif;
+    line-height: 1.6;
+
+}
+#header {
+    background-color: $black;
+    color: $white;
+    .inner_con {
+        @include flexbox();
+        height: $header-height;
+        ul {
+            @include flexbox();
+            li {padding: 0 $default-space;}
+        }
+    }
+}
+#visual {
+    background-color: $black;
+    color: $white;
+    img {
+        width: 100%;
+    }
+}
+#product_menu {
+    @include flexbox();
+    height: 120px;
+    border-bottom: 3px double #ccc;
+    ul {
+        @include flexbox();
+        li {
+            padding:  0 $default-space;
+        }
+    }
+}
+#product_lists {
+    h3 {
+        text-align: center;
+        padding:  $default-space * 2;
+    }
+    ul {
+        @include flexbox();
+    }
+    padding: $default-space;
+}
+@mixin lilayout ($color, $width,$height) {
+    background-color: $color;
+    width: $width;
+    height: $height;
+    
+}
+#banner {
+    div {
+        float: left;
+        &:nth-child(1) {
+            @include lilayout(blue,50% ,500px )
+        }
+        &:nth-child(2) {
+            @include lilayout( red,50%  ,250px )
+        }
+        &:nth-child(3) {
+            @include lilayout(yellow,25% ,250px )
+        }
+        &:nth-child(4) {
+            @include lilayout(green,25% ,250px )
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+#footer_menu {
+    background-color: aliceblue;
+    height: 80px;
+    @include flexbox();
+    padding: $default-space;
+    ul {
+        @include flexbox( );
+        li {padding:  0 $default-space;}
+    }
+}
+#footer_copy {
+    @include flexbox( );
+    height: 80px;
+}

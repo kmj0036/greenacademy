@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; list-style: none;}
+        #wrap {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 200px;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: 1000px;
+        }
+        li {
+            width: 25%;
+            height: 200px;
+            background-color: bisque;
+            border: 1px solid blueviolet;
+        }
+        @media screen and (max-width:1024px) {
+             li {width: 33%;}    
+        }
+        @media screen and (max-width:769px) {
+            li {
+                width: 50%;
+            }
+        }
+        @media screen and (max-width:768px) {
+            li {
+                width: 45%;
+            }
+            
+        }
+
+        /* 1024이상은 4개 미만은 3개 768이하는 2개식 배치되도록  */
+        /* li 에 높이만 200px  border background주기 */
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+            <li>list6</li>
+            <li>list7</li>
+            <li>list8</li>
+            <li>list9</li>
+            <li>list10</li>
+            <li>list11</li>
+            <li>list12</li>
+        </ul>
+    </div>
+</body>
+</html>

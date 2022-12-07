@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1" class="divbox">box01</div>
+    <div id="box2" class="divbox">box02</div>
+    <p>p</p>
+    <script>
+        // 단수 선택
+        // id 선택
+        // document.getElementById("")
+        // document.querySelector("css선택자 그대로 ex> #box01")
+        // 복수선택
+        // document.getElementsByClassName("class명")-html컬랙션(유사배열)
+        // document.getElementsByTagName("태그명")-html컬랙션(유사배열)
+        // document.querySelectorAll(css선택 그대로)-노드리스트(유사배열)
+        document.getElementsByClassName("divbox")[0].innerHTML = "html컬랙션";
+        document.getElementsByTagName ("p") [0].innerHTML= "p의 내용을 변경";
+    </script>
+</body>
+</html>

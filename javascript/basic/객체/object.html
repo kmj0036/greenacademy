@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj1 = {};
+        let obj2 = new Object();
+        obj1.name = "green"
+        obj1.age = 30;
+        obj2.name = "blue"
+        obj2.age = 26;
+        console.log(obj1);
+        console.log(obj2);
+        let arr =[1,2,3];
+        console.log(arr);
+
+        let obj3 = {
+            name:"pink",
+            age: 30
+        }
+        // obj3에 property 추가
+        printtobj(obj3);
+        obj3.hasjob = true;
+
+        // property 삭제
+        delete obj3.hasjob
+        console.log(obj3);
+       
+        console.log(obj3["age"]);
+
+        function print(name,age){
+            console.log(name);
+            console.log(age);
+        }
+        print("aaa",20)
+        function printtobj(obj1){
+            console.log(obj1.name);
+            console.log(obj1.age);
+        }
+
+
+        // let student1 = {
+        //     name :"##",
+        //     age : 11,
+        //     tel:"010-1234-5678"
+        // }
+        // let student2 = {
+        //     name :"#@",
+        //     age : 13,
+        //     tel:"010-5555-5678"
+        // }
+        // 이렇게 만들면 많이 만들때 계속해서 입력을 해줘야 해서 귀찮다.
+        // 그러니 생성자 함수를 통하여 간편히 만들것이다.
+
+        // 생성자 함수=객체를 찍어낸다.
+        function Person(name, age, tel) {
+            // this = {}; 가 생략되어 있다. 
+            this.name = name;
+            this.age = age;
+            this.tel = tel;
+            // return this; 가 생략되어 있다
+        }
+        let student1 = new Person("수민",22,"010-1234-5678")
+        let student2 = new Person("재훈",32,"010-1111-2222")
+        console.log(student1);
+        console.log(student2);
+
+        function makePerson(name,age){
+            return {
+                name:name,                  /*name: name의 앞은 name은 key이기 때문에 값을 바꿔도 상관없다.*/
+                age: age                    /* 선언한 student3은 73번의 name 과 age에 들어가서 return에서 나온다.*/
+            }
+        }
+        let student3 = makePerson("재원",27);
+        console.log(student3)
+
+        // in 연산자 해당하는 object 에 키가 있는지 
+        console.log('name' in student3);
+        console.log('hasJob' in student1);
+
+        //for in 구문 for of와 비슷
+        let arr2 = ["a","b","c","d","e"];
+        for (let i of arr2) {
+            console.log(i);
+        }
+        for (let key in student1) {
+            console.log(student1[key]);
+        } 
+    </script>
+</body>
+</html>

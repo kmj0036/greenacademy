@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin: 0;padding: 0;box-sizing: border-box;}
+    a {color: inherit; text-decoration: none;}
+    li {list-style: none;}
+    address {font-style: normal;}
+    
+    #wrap {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      background-color: lavender;
+    }
+    #header {
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+      align-items: center;
+      padding: 30px;
+    }
+    #header ul {
+      display: flex;
+    }
+    #header li {
+      padding: 0 10px;
+    }
+    h2 {
+      padding: 30px 0;
+      border-bottom: 1px solid #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    #mainContents ul {
+      display: flex;
+      justify-content: space-between;
+
+    }
+    #mainContents ul li {
+      width: 30%;
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 50px;
+    }
+    #mainContents ul li span {
+      display: block;
+    }
+    #mainNotice li {
+      border-bottom: 1px solid #ccc;
+      line-height: 50px;
+    }
+    #footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1>Green</h1>
+      <ul>
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li class="rightnone"><a href="#">menu4</a></li>
+      </ul>
+    </div>
+    <div id="contents">
+      <div id="mainContents">
+        <h2>메인 컨텐츠 01</h2>
+        <ul>
+          <li class="mr5">
+            <h3>작은 제목입니다.</h3>
+            글적는 부분입니다.
+            <span>2022.10.12</span>
+          </li>
+          <li class="mr5">
+            <h3>작은 제목입니다.</h3>
+            글적는 부분입니다.
+            <span>2022.10.12</span>
+          </li>
+          <li>
+            <h3>작은 제목입니다.</h3>
+            글적는 부분입니다.
+            <span>2022.10.12</span>
+          </li>
+        </ul>
+      </div>
+      <div id="mainNotice">
+        <h2>공지사항</h2>
+        <ul>
+          <li><a href="#">그린컴퓨터 아카데미 소식</a></li>
+          <li><a href="#">그린컴퓨터 아카데미 소식</a></li>
+          <li><a href="#">그린컴퓨터 아카데미 소식</a></li>
+          <li><a href="#">그린컴퓨터 아카데미 소식</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="footer">
+      <address>주소 : 서울특별시 용산구 한강대로 대표이사: 그린 사업자등록번호 : 110-12-12345 통신판매신고 : 
+        <br/>제 2020-서울용산-000호</address>
+      <h1>Green</h1>
+    </div>
+  </div>
+</body>
+</html>

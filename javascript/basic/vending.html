@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            A음료:500원<br/>
+            B음료:700원<br/>
+            C음료:1000원
+        </div>
+        <button onclick="input100()">100</button>
+        <button onclick="input500()">500</button>
+        <button onclick="input1000()">1000</button>
+        <p id="money"></p>
+        <p id="select"></p>
+    </div>
+    <script>
+        // 버튼을 클릭하면 money에  해당 버튼의 금액을 더해주고
+        // id money에 현재 투입금액을 표시해주고
+        // id select에 금액에 따라 살수있는 음료수 종류를표기할것
+        let money = 0;
+        function input100(){
+            money=money+100;
+            console.log("100원이 투입되었습니다.")
+            document.querySelector("#money").innerHTML =money;
+            selctch();
+            //money가 500이상일때 a
+            // money가 700이상일때 a b
+            // money가 1000이상일때 a b c
+         
+        }
+        function input500(){
+            money=money+500;
+            console.log("500원이 투입되었습니다.")
+            document.querySelector("#money").innerHTML =money;
+            selctch();
+           
+        }
+        function input1000(){
+            money=money+1000;
+            console.log("1000원이 투입되었습니다.")
+            document.querySelector("#money").innerHTML =money;
+            selctch();
+          }
+          function selctch(){
+            let selectMenu = ""
+            if (money>=1000){
+                selectMenu = "a b c";
+            }else if(money>=700) {
+                selectMenu = "a b";
+            }else if(money>=500) {
+                selectMenu = "a "
+            }else {
+                selectMenu = "no "
+            }
+            document.querySelector("#select").innerHTML = selectMenu;   
+          }
+    </script>
+</body>
+</html>

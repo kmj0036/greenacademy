@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myFun1 = ()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(function(){
+                console.log("1번주문완료");
+                },1000)
+            })               
+        }
+        const myFun2 = (message)=>{
+            console.log(message);
+            return new  Promise((resolve,reject)=>{
+                setTimeout(function(){
+                console.log("2번주문완료");
+                },2000)
+            })
+        }
+        const myFun3 = (message)=>{
+            console.log(message);
+            return new Promise((resolve,reject)=>{
+                setTimeout(function(){
+                console.log("3번주문완료");
+                },3000)
+
+            })
+        }
+        // myFun1(function(){
+        //     myFun2(function(){
+        //         myFun3(function(){
+        //             console.log("end")
+        //         })
+        //     })
+        // });
+        myFun1()
+        .then(res=>myFun2(res))
+        .then(res=>myFun3(res))
+        .then(res=>console.log(res))
+
+    </script>
+</body>
+</html>

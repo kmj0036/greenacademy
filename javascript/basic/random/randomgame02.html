@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 가위바위보 게임 하나 만들기
+        "You:입력값 com:랜덤 출력값"콘솔에 출력 
+        가위바위보의 승자를 구한뒤 누구의 승리인지 콘솔에 출력-->
+        <script>
+            // 가위바위 보 중 하나를 입력받아 입력받은 문자가 가위 바위 보 가 아니면 '잘못입력하셨습니다.'를 출력 
+            let rps=prompt("가위,바위,보중 하나를 입력해주세요");
+            if (rps!=="가위"&&rps!=="바위"&&rps!=="보"){
+                console.log("잘못입력하셨습니다.");
+            }else {
+                rpsGame(rps);
+            }
+            // 가위바위보중 하나가 입력되면 랜덤으로 가위바위 보 중 하나를 랜덤하게 제출
+            // 컴퓨터에게  랜덤 가위,바위,보를 리턴
+            function rpsRandom(){
+                let num= Math.floor(Math.random()*3)
+                
+            }
+            let num2 =rpsRandom();{
+            let result = num==0? "가위": num==1? "바위": "보" ;
+            return result;
+            console.log(rpsRandom());
+        }
+        function rpsGame(rps){
+            let com_rps = rpsRandom();
+            console.log(`You:${rps},Com:${com_rps}`)
+            if(rps==com_rps) {
+                console.log("비겼습니다.")
+            }else if( 
+                rps=="가위" && com_rps=="보"||
+                rps=="바위" && com_rps=="가위"||
+                rps=="가위" && com_rps=="보")
+            {
+                console.log("You Win.")
+            }else {
+                console.log("You Lose")
+            }
+        }
+    </script>
+</body>
+</html>

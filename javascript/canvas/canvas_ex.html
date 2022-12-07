@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{background-color: #eee;}
+    </style>
+</head>
+<body>
+    <canvas width="1600" height="700"></canvas>
+    <script>
+        const canvas = document.querySelector("canvas");
+        const ctx= canvas.getContext("2d");
+        let x = 100;
+        let y = 100;
+        let rectSize=50;
+        for(let i=0;i<4;i++){
+            y=100+(i*150)
+            // ctx.fillRect(100+(150*(i-1)),100,50,50)
+            for(let j=0;j<4;j++){
+                rectSize=50+(i*25)
+                x=100+(j*150)
+                ctx.fillRect(x,y,rectSize,rectSize);
+            }
+        }
+    </script>
+</body>
+</html>

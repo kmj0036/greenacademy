@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 1000px;
+            height: 100px;
+            transition: 0.5s;
+            background-color: tomato;
+        }
+        .on {
+            height: 500px;
+        }
+        .on1 {
+            height: 500px;
+            background-color: blue;
+        }
+        .on2 {
+            height: 500px;
+            background-color: #fff;
+        }
+        .on3 {
+            height: 500px;
+            background-color: yellow;
+        }
+        .on4 {
+            height: 500px;
+            background-color: aqua;
+        }
+        ul{
+            display: flex;
+            width: 100%;
+        }
+        li {
+            padding: 0 50px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="a1">list1</li>
+        <li id="a2">list2</li>
+        <li id="a3">list3</li>
+        <li id="a4">list4</li>
+    </ul>
+    <div>
+
+    </div>
+    <script>
+        let btn =document.querySelector("#a1");
+        btn.addEventListener("mouseenter",function(){
+            if(id="a1"){
+                document.querySelector("div").classList.toggle("on1")
+            }else if(id="a2"){
+                document.querySelector("div").classList.toggle("on2")
+            }else if(id="a3"){
+                document.querySelector("div").classList.toggle("on3")
+            }else if(id="a4"){
+                document.querySelector("div").classList.toggle("on4")
+            }
+        })
+        
+        
+
+    </script>
+</body>
+</html>

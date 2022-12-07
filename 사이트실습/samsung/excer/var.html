@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --main-color:blue;
+            --small-font:14px;
+            --middle-font:18px;
+            --large-font:24px;
+            --default-font:14px;
+            --default-padding:16px;
+            --content-width:1200px;
+            --dark-font-color:#222;
+            --ligh-font-color:#666;
+            --vlight-font-color:#eee;
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        li {list-style: none;}
+        body {
+            font-size: var(--default-font);
+            line-height: 1.6;
+            color: var(--dark-font-color);
+        }
+        #wrap {
+            width: 100%;
+            max-width: var(--content-width);
+        }
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #header {
+            background-color: var(--main-color);
+            color: #fff;
+            height: 80px;
+        }
+        #header li {
+            padding: calc(var(--default-padding) *2);
+        }
+        section {
+            width: 100%;
+            height: 200px;
+            border-bottom: 1px solid var(--main-color);
+            padding:  calc(var(--default-padding) *2);
+        }
+        section h2 {
+            color: var(--main-color);
+            padding: var(--default-padding);
+        }
+        footer {
+            height: 100px;
+        }
+        address {
+            font-style: normal;
+        }
+        h1 {
+            font-size: calc(var(--large-font) *1.6);
+        }
+        h2 {
+            font-size:  var(--large-font);
+        }
+        p {
+            font-size: var(--middle-font);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header" class="flex">
+            <h1>green</h1>
+            <ul class="flex">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+            </ul>
+        </div>
+        <div id="main">
+            <section>
+                <h2>제목입니다.</h2>
+                <p>내용입니다</p>
+            </section>
+            <section>
+                <h2>제목입니다.</h2>
+                <p>내용입니다</p>
+            </section>
+            <section>
+                <h2>제목입니다.</h2>
+                <p>내용입니다</p>
+            </section>
+            <section>
+                <h2>제목입니다.</h2>
+                <p>내용입니다</p>
+            </section>
+        </div>
+        <div id="footer" class="flex">
+            <address>
+                주소: 울산 남구 삼산중로 100번길 26 그린컴퓨터 아카데미
+            </address>
+            <h1>green</h1>
+        </div>
+    </div>
+</body>
+</html>

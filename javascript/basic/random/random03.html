@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+    //      1~6 랜덤한 숫자를 호출
+    //     let usernum = Math.ceil(Math.random()*6);
+    //     console.log(`당신의 주사위는${usernum}이 나왔습니다.`)
+    //      user
+    //     let computernum = Math.ceil(Math.random()*6);
+    //     console.log(`Computer의 주사위는${computernum}이 나왔습니다.`)
+    //      com
+    //      비교
+    //     if (usernum==computernum){
+    //         console.log("Draw")
+    //     }else if(usernum>computernum){
+    //         console.log("You Win")
+    //     }else{
+    //         console.log("You Lose")
+    // 
+
+    //  주사위는 1~6사이값
+    // 컴퓨터와 사람에게 랜덤한값을 지정해야 하며
+    // 지정된 주사위 갑승ㄹ 출력하여
+    // 주사위값을 비교하여 승리자를 결정 
+    function gameGo(){
+        let com_dice = Math.ceil(Math.random()*6);
+        let per_dice = Math.ceil(Math.random()*6);
+        console.log(`컴퓨터 주사위는 :${com_dice}, 당신의 주사위는:${per_dice}`);
+        if(com_dice==per_dice){
+            console.log("Draw");
+        }else if(com_dice>per_dice){
+            console.log("You lose")
+        }else{
+            console.log("You Lose")
+        }
+    }
+    gameGo();
+
+    
+    </script>
+</body>
+</html>

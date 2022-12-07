@@ -1,0 +1,9 @@
+.section {
+  width: 100%;
+}
+.section .list {
+  padding: 10px;
+}
+.section .list lia {
+  background: plum;
+}

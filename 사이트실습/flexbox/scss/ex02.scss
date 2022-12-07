@@ -1,0 +1,84 @@
+     * { margin:0; padding: 0; box-sizing: border-box; }
+    a { color: inherit; text-decoration: none; }
+    li { list-style: none; }
+    h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+    address { font-style: normal; }
+body {
+    font-family: Arial, Helvetica,"맑은 고딕", sans-serif;
+    color: #222;
+    font-size: 14px;
+    line-height: 1.6;
+}
+#wrap {
+    background-color: #f1f1f1;
+    padding: 16px;
+    #header{
+        background-color: #fff;
+        height: 150px;
+        #headerTitle {
+            text-align: center;
+            padding-top: 30px;
+            height: 120px;
+            h1 {
+                font-weight: bold;
+            }
+        }
+        #headerMenu {
+            background-color: #333;
+            height: 30px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ul {
+                display: flex;
+                width: 30%;
+                justify-content: space-around;
+                align-items: center;
+            }
+            a {
+                width: 10%;
+            }
+        }
+    }
+    #contents {
+        .whiteBg {
+            background-color: #fff;
+        }
+        h2 {
+            font-weight: bold;
+        }
+        h3 {
+            font-weight: bold;
+        }
+        .grayBg {
+            margin: 10px 0;
+            height: 180px;
+            background-color: #555;
+            color: #fff;
+            padding: 16px 0 ;
+        }
+        .whiteBg {
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        padding-top: 16px;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        #left {
+            width: 75%;
+           
+        }
+        #right {
+            width: 23%;
+        }
+    }
+    #footer {
+        text-align: center;
+        color: #fff ;
+        background-color: #4d4d4d;
+        padding: 30px;
+    }
+}

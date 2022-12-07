@@ -1,0 +1,87 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "맑은 고딕", sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+#wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+#wrap #header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+#wrap #header ul {
+  display: flex;
+  align-items: center;
+}
+#wrap #header li {
+  padding: 0 20px;
+}
+#wrap #contents {
+  padding-top: 20px;
+}
+#wrap #contents h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+#wrap #contents #mainContents ul {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+#wrap #contents #mainContents ul li {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 60px 110px;
+}
+#wrap #contents #mainContents ul li h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+#wrap #contents #mainContents ul li span {
+  display: block;
+}
+#wrap #contents #mainNotice {
+  margin-top: 50px;
+}
+#wrap #contents #mainNotice ul {
+  padding-top: 60px;
+}
+#wrap #contents #mainNotice ul li {
+  font-size: 16px;
+  padding: 5px 15px;
+  border-bottom: #ccc 1px solid;
+}
+#wrap #footer {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}

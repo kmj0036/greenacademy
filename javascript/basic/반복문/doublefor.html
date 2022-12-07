@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        let div =document.querySelector("div");
+        let str ="<ul>";
+        for(i=2;i<10;i++ ){
+            str=str+`<li><h3>${i}단입니다.</h3><ul>`;
+                for(let j=1; j<10;j++){
+                str=str+`<li>${i}*${j}=${i*j} </li>`;
+                }
+            str= str+"</ul></li>";
+        }
+        str = str +"</ul>";
+        div.innerHTML=str;
+    </script>
+    <!-- <div></div>
+    <script>
+        let str = ""
+        for(i=2;i<10;i++) {
+            str=str+`<ul><li><h3>${i}단 입니다.</h3><ul>`;
+            for(d=1;d<10;d++){
+                str =str+`<li>${i}*${d}=${i*d}</li>`;
+            }
+            str =str + "</ul></li></ul>"        
+        }
+    document.querySelector("div").innerHTML=str;
+    </script> -->
+</body>
+</html>

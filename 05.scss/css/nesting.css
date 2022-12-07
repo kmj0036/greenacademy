@@ -1,0 +1,53 @@
+@charset "UTF-8";
+body {
+  font-size: 12px;
+  font-family: "맑은 고딕";
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+body div {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+body div h1 {
+  font-size: 24px;
+}
+body div ul {
+  display: flex;
+}
+body div ul li {
+  list-style: none;
+  padding: 0 20px;
+}
+body div ul li:hover {
+  background-color: red;
+}
+body div ul li::after {
+  content: "Hello World";
+}
+
+.fs-small {
+  font-size: 14px;
+}
+.fs-medium {
+  font-size: 18px;
+}
+.fs-large {
+  font-size: 24px;
+}
+
+.btn {
+  width: 100px;
+  height: 50px;
+  background-color: aquamarine;
+}
+.btn.active {
+  border-bottom: 3px solid red;
+}

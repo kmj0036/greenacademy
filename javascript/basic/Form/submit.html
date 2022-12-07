@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="join.php" method="get" onsubmit="return formcheck()" name="signform">
+        <p>아이디<input type="text" id="userId" name="userId"/></p>
+        <p>비밀번호<input type="text" id="userPw" name="userPw"/></p>
+        <p><button type="submit">전송</button></p>
+    </form>
+    <script>
+        // form이 submit이 진행되면 function(e)발동
+        document.querySelector("form").addEventListener("submit",function(e){
+            e.preventDefault()
+        })
+        // preventDefault 걸려있는 기본이벤트를 제거
+        function formCheck(){
+            console.log("form checking")
+            let form =document.forms.signform;
+            let idcheck = form.userId;
+            let pwcheck = form.userPw
+            idcheck.addEventListener("input",function(){
+                if(this.value.length >=5 && !idcheck){
+                    return;
+                }
+            })
+            // id입력시 빈칸x 글자수가 5자 이상인지
+            // 비밀번호가 빈칸x 5자 이상이며숫자가 1개이상 포함
+            // if (this.value.length == 6 && !isNaN(Number(this.value))){
+            // form.ssn2.focus();
+            // }
+                
+        }
+    </script>
+</body>
+</html>

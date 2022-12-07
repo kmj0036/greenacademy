@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+#wrap {
+  width: 1000px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+#header {
+  text-align: center;
+  height: 20vh;
+  padding-top: 5%;
+}
+#header h1 {
+  font-size: 40px;
+}
+#header input {
+  width: 60%;
+  height: 50px;
+  border-radius: 50px;
+}

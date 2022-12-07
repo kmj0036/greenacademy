@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+          width: 100%;
+          height: 100vh;
+        }
+        #wrap {
+          width: 100%;
+          height: 100vh;
+        }
+        #imgView {
+          width: 60%;
+          height: 50%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          overflow: hidden;
+        }
+        #imgDivs{
+          position: absolute;
+          top: 0;
+          left: 0%;
+          transition: 0.5s;
+          width: 400%;
+          display: flex;
+        }
+        #imgDivs div {
+          width: 25%;
+        }
+        .btn {
+          width: 80px;
+          height: 80px;
+          background: tomato;
+          color: #fff;
+          line-height: 80px;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          text-align: center;
+          cursor: pointer;
+        }
+        #nextbtn {
+          transform: translate(320px, -50%);
+        }
+        #prevbtn {
+          transform: translate(-400px, -50%);
+        }
+        #indi {
+          position:absolute;
+          bottom: 50%;
+          transform: translateY(190px);
+          width: 100%;
+          text-align: center;
+          padding: 10px;
+          
+        }
+        #indi span {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background-color: tomato;
+          border-radius: 50%;
+          margin: 0 3px;
+          font-size: 0;
+        }
+        #indi span.on {
+          background-color: aqua;
+        }
+      </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="imgView">
+          <div id="imgDivs">
+            <div class="imgdiv"><img src="images/img_lights1.jpg" alt=""></div>
+            <div class="imgdiv"><img src="images/img_lights2.jpg" alt=""></div>
+            <div class="imgdiv"><img src="images/img_lights3.jpg" alt=""></div>
+            <div class="imgdiv"><img src="images/img_lights4.jpg" alt=""></div>
+            <div class="imgdiv"><img src="images/img_lights1.jpg" alt=""></div>
+            <div class="imgdiv"><img src="images/img_lights2.jpg" alt=""></div>
+          </div>
+        </div>
+        <div id="prevbtn" class="btn">이전</div>
+        <div id="nextbtn" class="btn">다음</div>
+        <div id="indi">
+          
+        </div>
+      </div>
+</body>
+</html>

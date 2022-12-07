@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for (let i=1; 1<11;1++) {
+        //     console.log(i)
+        // }
+
+        // input을 입력받는다 값이 숫자면  다시 입력을 받고 
+        // 문자나 입력을 하지않는 다면 반복문을 빠져나가라
+        // let input=prompt("값을 입력해주세요");
+        // while (input==Number) {
+        //     let input=prompt("값을 입력해주세요");
+        // }
+        // if ()   
+        
+
+        // while(true) {
+        //     let input=prompt("숫자를 입력해주세요");
+        //     if (!input||isNaN(Number(input))) {
+        //         break;
+        //     }
+        // }
+        // for문 과 continue를사용하여
+        // 1부터 9까지홀수만 
+        for (let i=1; i<11;i++){
+            if (i % 2 == 0){
+            continue; } 
+            console.log(i);
+        }
+
+
+        // let id =prompt ("ID");
+        // if (!id) {
+        //     alert ("id입력하지 않음")
+        // }else if (id==="admin"){
+        //    let pw= prompt("pw");
+        //    if(pw==="1234"){
+        //     alert("환영합니다.");}
+        //     else {
+        //         alert("인증에 실패했습니다.");
+        //     }
+        // }else{
+        //     alert("인증에 실패했습니다.");
+        // }
+
+
+
+        // if
+        // 년도를 입력받아
+        // 해당 년도가윤년이면 윤년입니다.를 출력
+        // (4로 나누어서 나머지가 생기지 않는 해는 윤년)
+        // (100으로 나누어서 떨어지면 평년)
+        // (400으로 나누어 떨어지면 윤년)
+        let year =prompt("년도를 입력해주세요")
+        if (year%4==0) {
+            console.log("윤년 입니다.")
+            if(year%100==0){
+                console.log ("평년입니다.")
+                if(year%400==0){
+                    console.log("윤년 입니다.")
+                }
+            }
+        }
+        // for (let i=1; i<11;i++){
+        //     if (i % 2 == 0){
+        //     continue; } 
+        //     console.log(i);
+        // }
+    </script>
+</body>
+</html>
+
+
