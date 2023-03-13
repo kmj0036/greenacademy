@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr =[1,"blcok",true,function(){alert('꽝')}];
+        console.log(arr);
+        let [var1,var2,var3,var4]=arr;
+        console.log(var1);
+        console.log(var2);
+        console.log(var3);
+        console.log(var4);
+        let myFuntion =arr[3];
+        // console.log(typeof(myFuntion))
+        
+        let myfun = function(){
+            // console.log("함수호출");
+        }
+        myfun();
+        let myfun1 = () =>{
+            console.log("함수호출")
+        }
+    </script>
+</body>
+</html>

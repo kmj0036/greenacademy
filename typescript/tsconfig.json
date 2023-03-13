@@ -1,0 +1,24 @@
+{
+  //src안의 확장자가 ts인 모든 파일은 컴파일 대상으로 지정
+  "include": [
+    "src/**/*.ts"
+  ],
+  //node_modules는 타입스크립트 컴파일 대상에서 제외시켜준다.
+  "exclude": [
+    "node_modules"
+  ],
+  //타입스크립트 컴파일러에 대한 옵션 지정
+  "compilerOptions": {
+    //자바스크립트 구문 지정
+    "target": "ES6",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    /* Modules */
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    //타입스크립트 파일 위치 
+    "rootDir": "src",                                    /* Specify the root folder within your source files. */
+    //자바스크립트 폴더 위치
+    "outDir": "dist",                                         /* Specify an output folder for all emitted files. */
+    "strict": true,  
+    "removeComments": true
+  }
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카드 짝맞추기</title>
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/script.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div id ="header">
+      <h1>Welcome to the Trap of Greed</h1>
+      <i id="soundon" class="material-icons" style="font-size:56px;color:red">volume_up</i>
+      <i id="soundoff" class="material-icons" style="font-size:56px;color:blueviolet">volume_off</i>
+    </div>
+    <div class="container">
+      <div id="left" class="card">
+        <div class="card-inner">
+          <div id="leftfront"class="card-front">
+          </div>
+          <div class="card-back">
+            <img src="./img/wallpaper.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div id="right" class="card">
+        <div class="card-inner">
+          <div id= "rightfront" class="card-front">
+          </div>
+          <div class="card-back">
+            <img src="./img/wallpaper.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div id="board">
+        <div id ="score" class="board"></div>
+        <div id="lefttime" class="board"></div>
+        <div id="restrat" class="board">
+          <img src="/img/restart.jpg" alt="">
+        </div>
+      </div>
+    </div>
+      <button class="button up">
+        <i class="material-icons" style="font-size:48px;color:red">arrow_upward</i>
+      </button>
+      <button class="button down">
+        <i class="material-icons" style="font-size:48px;color:blue">arrow_downward</i>
+      </button>
+  </div>  
+</body>
+</html>

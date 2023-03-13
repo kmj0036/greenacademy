@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem("test",1)
+        console.log(localStorage.getItem("test"));
+        localStorage.setItem("green","blue");
+        let obj = {
+            name:"green",
+            age:30,
+            numArr:[1,2,3,4,5]
+        }
+        let newArr = [1,2,3,4,5];
+        //JSON.stringify() 객체->문자열
+        //JSON.parse() 문자열->객체
+
+        localStorage.setItem("person",JSON.stringify(obj));
+        localStorage.setItem("newArr",JSON.stringify(newArr));
+        localStorage.removeItem("green");
+        console.log(localStorage.getItem("newArr"));
+        let aa =JSON.parse(localStorage.getItem("newArr"));
+        let obj2 = JSON.parse(localStorage.getItem("person"))
+        // console.log(aa)
+        aa.forEach(a=>console.log(a));
+        //forEach는 배열에 사용하는것이다.
+
+        //새로운 데이터가 추가되었을때
+        //storage이벤트
+        window.addEventListener("Storage",function(e){
+            console.log(e);
+            if(event.key !="abc")return;
+            console.log(e.key+":"+e.newValue+"at"+e.url)
+        })
+        // console.log(localStorage)
+        //for...in 구문을 사용하면 사용자가 지정하지 않아도 객체가 가진 기본 고유 항목도 조회할수있기때문에
+        //hasOwnProperty 메서드를 사용
+        for(let key in window.localStorage){
+            if(localStorage.hasOwnProperty(key)){
+                // hasOwnProperty메서드는 객체가 자기만의 직접적인 속성을 가지고잇는지 판단
+                //value 조회
+                // let storageValue = window.localStorage.getItem(key)
+                // document.write(key+":"+storageValue+"<br/>");
+            }
+        }
+        // let storageValue = window.localStorage.getItem(key)
+        let keyarr =Object.keys(localStorage);
+        let enArr = Object.entries(localStorage);
+        let valarr= Object.values(localStorage);
+        // console.log(keyarr)
+        // console.log(enArr)
+        // console.log(valarr)
+        for(let a of keyarr){
+            let storageValue=localStorage.getItem(a)
+            document.write(a+":"+storageValue+"<br/>")
+        }
+    </script>
+</body>
+</html>

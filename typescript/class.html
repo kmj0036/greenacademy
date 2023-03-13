@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //클래스 선언
+        class Person {
+    //생성자 
+     constructor(name,age){
+        this.name= name;
+        this.age=age;
+    }
+    //method 정의
+    speak(){
+        console.log(`${this.name} hello!`);
+    }
+}
+const min = new Person('min',20);
+min.speak();
+console.log(min)
+    </script>
+</body>
+</html>

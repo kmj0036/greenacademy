@@ -1,0 +1,147 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+
+    
+
+@keyframes colorchange {
+  0% {
+    color: #FEF9A7;
+  }
+  25%{
+    color: #FAC213;
+  }
+  50%{
+    color: #F77E21;
+  }
+  75%{
+    color: #D61C4E;
+  }
+  100%{
+    color: #FEF9A7;
+  }
+}
+#wrap{
+  width: 100%;
+  height: 100vh;
+ 
+}
+#header{
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  padding: 30px;
+}
+#header > h1{
+  animation: colorchange 5s forwards infinite;
+}
+.container {
+    width: 100%;
+    height: 80%;
+   padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.material-icons{
+  cursor: pointer;
+}
+
+#board{
+  width: 25%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.board{
+  margin: 0 auto;
+  width: 80%;
+  height: 30%;
+  background-color: rgba(255, 255,255, 0.4);
+  border-radius: 10px;
+}
+#score>p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  height: 100%;
+}
+#lefttime>p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  height: 100%;
+}
+.card {
+  width: 360px;
+  height: 640px;
+  /* margin: 0 auto; */
+  border: 0;
+  outline: 0;
+  /* top: */
+  /* perspective: 140px; */
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 2.5s;
+  transform-style: preserve-3d;
+}
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+#left{
+  width: 30%;
+  /* margin:0 5% */
+}
+#right{
+  width: 30%;
+  /* margin: 0 5%; */
+}
+#restrat>img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  border: 0;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+.card img{
+    width: 360px;
+    height: 640px;
+    outline: none;
+    border: none;
+}
+.button{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+}
+.up {
+  position: absolute;
+  left:45%;
+  top:78%;
+  
+}
+.down {
+  position: absolute;
+  left:55%;
+  top:78%
+}

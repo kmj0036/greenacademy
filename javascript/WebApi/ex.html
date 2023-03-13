@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Pancakes</li>
+        <li>Donuts</li>
+        <li>Cupcakes</li>
+        <li>Icecream</li>
+        <li>Cookies</li>
+        <li>Chocolate</li>
+    </ul>
+    <script>
+        const ul =document.querySelector("ul");
+        let textArr = [];
+        ul.addEventListener("click",function(e){
+            let text=e.target.innerHTML;
+            if(!textArr.includes(text)){
+                textArr.push(text)
+            }
+            localStorage.setItem("favorites",JSON.stringify(textArr))
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        sessionStorage.setItem("title","green")
+        const user = [
+            {id:1,name:"green"},
+            {id:2,name:"blue"}
+        ]
+        for(let key in window.sessionStorage){
+            let sessionStorageValue=sessionStorage.getItem(key);
+            document.write(key+":"+sessionStorageValue+"<br/>")
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object 객체 :속성과 메서드를 가지고 있는 데이터 타입
+        //자바스크립트의 기본 데이터 타입
+        //number,string,boolean,null,undefined
+        //이런 여러형태의 데이터 타입을 한번에 받아내기 위한 것이 객체라고 한다.
+        //{key:value}형태로 생긴것이 object이다.
+        //object.key 혹은 object['key']와 같은 방식으로 접근한다.
+        let userJob ="job";
+        let user ={
+            name:"green",
+            age:30,
+            nickname:"abc",
+            //[userJob]이 위에서 지정한것과 같이 job:강사로 출력된다.
+            [userJob]:"강사"
+        }
+        let user2 ={
+            name:"green",
+            age:30,
+            nickname:"abc",
+            //대괄호가 없기때문에 userJob:"강사 "로 출력된다.
+            userJob:"강사"
+        }
+        console.log(user);
+        console.log(user2);
+
+        //스프레드 구문 
+        //기존 object에서 필요한 값만 수정하기 위하여 쓰는 방식
+        let user3 ={
+            ...user2,
+            name:"blue",
+            age:33
+        }
+        console.log(user3);
+        // let name = user2.name;
+        // let age = user2.age;
+        // ->
+        let {name,age}= user2;
+        console.log(name,age)
+
+
+        let member ={
+            first_name:"lee",
+            name:"jaesung",
+            gender:"male",
+            addr:"울산광역시 남구 천상로 885번길 203호",
+            age:25,
+            
+        }
+    </script>
+</body>
+</html>

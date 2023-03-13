@@ -1,0 +1,35 @@
+*{
+    margin: 0;padding: 0; box-sizing: border-box;
+}
+li {list-style: none;}
+body{ 
+    width: 100%;
+}
+#top{
+    display: flex;
+    position: absolute;
+    left: 65%;
+    padding-top: 10px   ;
+    align-items: center;
+    width: 35%;
+}
+#top>select {
+    height: 66%;
+}
+#top>ul{
+    display: flex;
+    align-items: center;
+}
+#top>ul>li{
+    padding: 0 7px;
+    border-left: 1px solid #222;
+}
+#top> div{
+    border: 1px solid #222;
+    border-radius: 10px;
+    text-align: center;
+    width: 15%;
+}
+#topmenu img{
+    size: 30%;
+}

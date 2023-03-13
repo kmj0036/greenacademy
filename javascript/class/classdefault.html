@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //클래스,객체
+        //클래스:객체를 찍어내기 위해 만든 도구,템플릿
+        class Car{
+            constructor(color,speed){
+                this.color = color;
+                this.wheels = 4;
+                this.speed=speed;
+            }
+            drive(){
+                console.log(`현재${this.speed}km/h의 속도로 주행중입니다.`)
+            }
+        }
+        const car1 = {
+            color:"green",
+            wheels:4
+        }
+        const car2 ={
+            color:"red",
+            wheels:4
+        }
+        const car3 = new Car("blue",60);
+        console.log(car3)
+        car3.drive();
+
+        //static keyword
+        //클래스 이름을 사용해서 호출
+        //객체에 상관없이 사용하는 메서드
+        class Article {
+            constructor(articleNumber){
+                this.articleNumber=articleNumber;
+            }
+            static printPublisher(){
+                console.log("I'm class method")
+            }
+        }
+        const article1= new Article(10);
+        console.log(article1)
+        //articleNumber에 접근하려면
+        console.log(article1.articleNumber)
+        Article.printPublisher();
+        //의 경로로 접근한다. 
+
+        //method overiding
+        //상속 관계에 있는 부모 클래스에서 이미 정의 된 메서드를 자식클래스에서 메서드로 재정의 하는것
+        class Shpae{
+            constructor(width,height,color){
+            this.width=width;
+            this.height=height;
+            this.color=color;
+            }
+            draw(){
+                console.log(`${this.color}로 그립니다.`)
+            }
+            getArea(){
+                console.log( this.width *this.height);
+            }
+        }
+        class Rectangle extends Shpae {
+            constructor(width,height,color,name){
+                //넓이,높이,색 3가지 속성은 Shape의 생성자에서 받아왔기 때문에 Super를 사용하여 받아줘야한다.
+                super(width,height,color);
+                this.name=name;
+            }
+            draw(){
+                console.log(`사각형을 그립니다.`)
+            }
+        }
+        const rectangle = new Rectangle(20,20,'yellow')
+        console.log(rectangle);
+        rectangle.draw();
+        rectangle.getArea();
+
+        //instanceof a instanceof b     a 객체가 b클래스를 이용하여 만들어 졌는지 체크 
+        console.log(rectangle instanceof Rectangle);
+        console.log(rectangle instanceof Shpae);
+        console.log(rectangle instanceof Car);
+
+    </script>
+</body>
+</html>

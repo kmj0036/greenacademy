@@ -1,0 +1,126 @@
+*{
+    margin: 0;padding: 0; box-sizing: border-box;
+}
+li {list-style: none;}
+body{ 
+    width: 100%;
+}
+a{ font-style: normal;
+text-decoration: none;}
+#wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+#top{
+    display: flex;
+    /* position: absolute; */
+    /* left: 65%; */
+    justify-content: end;
+    padding-top: 10px   ;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+    padding-right: 10%;
+}
+#top>select {
+    height: 66%;
+}
+#top>ul{
+    display: flex;
+    align-items: center;
+}
+#top>ul>li{
+    padding: 0 7px;
+    border-left: 1px solid #222;
+}
+#top>a{
+    border: 1px solid #222;
+    border-radius: 10px;
+    text-align: center;
+    width: 5%;
+}
+#top> a:hover{
+    background-color: #222;
+    color: #fff;
+    
+}
+header{margin-bottom: 100px;}
+#topmenu {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    padding-top: 30px;
+}
+header>img{
+    position: absolute;
+    width: 15%;
+    height: 250px;
+    left: 0;
+    top: 0;
+}
+header>a{
+    position: absolute;
+    width: 15%;
+    height: 200px;
+    left: 0;
+    top: 0;
+}
+#topmenu>div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#topmenu>div>input {
+    width: 40%;
+}
+container{
+    padding: 20px;
+    width: 100%;
+    height: 900px;
+}
+container>a{
+    width: 100%;
+    height: 900px;
+}
+container>a>img{
+    position: relative;
+    z-index: 1;
+}
+container>p{
+    text-align: center;
+    margin-bottom: 100px;
+}
+#books{
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+#right{
+    display: flex;
+    justify-content: end;
+}
+#books>h2{
+    border-top: #999 1px solid;
+    padding-top: 10px;
+}
+#books>ul {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    justify-content: space-between;
+    border-bottom: #222 3px double;
+
+}
+#books>ul>li{
+    margin-top: 35px;
+    width: 16%;
+    height: 250px;
+}
+#books>ul>li>a{
+    height: 100%;
+    width: 160px;
+}
+
+
