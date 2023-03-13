@@ -2,7 +2,6 @@ const horizontal = 2; // 가로
 const vertical = 1; // 세로
 // container 요소를 검색
 const container = document.querySelector(".container");
-
 // 카드 세팅
 const setting = (hori, verti) => {
   for (let i = 0; i < hori * verti; i++) {
@@ -13,8 +12,8 @@ const setting = (hori, verti) => {
     const cardBack = document.createElement("div");
     
     // 그림 객체 선언
-    let img = document.createElement("img");
-    img.src = "./img/wallpaper.png";
+    let backcardimg = document.createElement("img");
+    backcardimg.src = "./img/wallpaper.png";
     // 생성한 문서객체에 클래스를 부여
     card.classList.add("card");
     cardInner.classList.add("card-inner");
@@ -30,7 +29,7 @@ const setting = (hori, verti) => {
     // 앞면에 카드 색 넣기
     cardFront.style.backgroundColor = "navy";
     // 뒷면에 카드 색 넣기
-    cardBack.appendChild(img);
+    cardBack.appendChild(backcardimg);
 
     // toggle기능 부여
     card.addEventListener("click", () => {

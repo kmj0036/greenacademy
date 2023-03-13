@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interaction</h1>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        const canvas=document.querySelector("canvas");
+        const ctx= canvas.getContext("2d")
+        let box= [];
+        //서체지정
+        ctx.font= "bold 24px sans-serif";
+
+        class Box{
+            constructor(index,x,y,speed) {
+                this.index=index;
+                this.x=x;
+                this.y=y;
+                this.speed=speed;
+                this.width=100;
+                this.height=100;
+                this.draw();
+            }
+            draw(){
+                ctx.fillStyle = "rgba(0,0,0,0.5)";
+                ctx.fillRect(this.x,this.y,this.width,this.height);
+                ctx.fillStyle="#fff";
+                ctx.fillText(this.index,this.x+40,this.y+40)
+            }
+        }
+        //box 객체 생성하여 배열에 넣기
+        let tempx,tempY,tempSpeed;
+        for(let i=0;i<50;i++){
+            tempSpeed=Math.ceil(Math.random()*5)
+            tempx= Math.random()*canvas.width*0.8;
+            tempY= Math.random()*canvas.height*0.8;
+            box.push(new Box(i,tempx,tempY,tempSpeed))
+        }
+        //box 이동 시키기
+        function boxMove (){
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            box.forEach(box=>{
+                box.x+= box.speed;
+                if(box.x>canvas.width){
+                    box.x= -box.x
+                }
+                box.draw();
+            })
+            requestAnimationFrame(boxMove)
+        }
+        boxMove();
+    </script>
+</body>
+</html>
